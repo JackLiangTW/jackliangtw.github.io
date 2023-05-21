@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jack Liang&#39;s portfolio and blog</title>
-    <link>http://jackliangtw.github.io/</link>
+    <link>https://jackliangtw.github.io/</link>
     <description>Recent content on Jack Liang&#39;s portfolio and blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Nov 2016 18:25:22 +0530</lastBuildDate><atom:link href="http://jackliangtw.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Nov 2016 18:25:22 +0530</lastBuildDate><atom:link href="https://jackliangtw.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo githubPage架設筆記</title>
-      <link>http://jackliangtw.github.io/portfolio/work1/</link>
+      <link>https://jackliangtw.github.io/portfolio/work1/</link>
       <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
       
-      <guid>http://jackliangtw.github.io/portfolio/work1/</guid>
+      <guid>https://jackliangtw.github.io/portfolio/work1/</guid>
       <description>Github新增2個專案: (A)Source code repository / Hugo source code存放 (HugoBlog) (B)Production repository / 展示GithubPage (jackliangtw.github.io) 教學來源:https://youtu.be/LIFvgrRxdt4
 安裝Hugo: win10安裝流程: C槽建立 /hugo/bin 資料夾 https://github.com/gohugoio/hugo/releases (Google 搜尋 hugo release) 下載最新版(amd64.zip) [eg: hugo_extended_0.111.3_windows-amd64.zip] 解壓縮到 C/hugo/bin/ 當中 環境變數Path設定 C:\Hugo\bin cmd檢查hugo指令是否成功: hugo version 參考:
 Git clone(A),(B)到local
@@ -22,10 +22,10 @@ Git clone(A),(B)到local
     
     <item>
       <title>作品集</title>
-      <link>http://jackliangtw.github.io/blog/</link>
+      <link>https://jackliangtw.github.io/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://jackliangtw.github.io/blog/</guid>
+      <guid>https://jackliangtw.github.io/blog/</guid>
       <description>Education 翻書作品集</description>
     </item>
     

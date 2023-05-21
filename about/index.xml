@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>關於我About me on Jack Liang&#39;s portfolio and blog</title>
-    <link>http://jackliangtw.github.io/about/</link>
+    <link>https://jackliangtw.github.io/about/</link>
     <description>Recent content in 關於我About me on Jack Liang&#39;s portfolio and blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://jackliangtw.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://jackliangtw.github.io/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
