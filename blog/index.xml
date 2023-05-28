@@ -1,111 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jack Liang&#39;s portfolio and blog</title>
-    <link>https://jackliangtw.github.io/</link>
-    <description>Recent content on Jack Liang&#39;s portfolio and blog</description>
+    <title>Blogs on Jack Liang&#39;s portfolio and blog</title>
+    <link>https://jackliangtw.github.io/blog/</link>
+    <description>Recent content in Blogs on Jack Liang&#39;s portfolio and blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 May 2023 14:33:01 +0530</lastBuildDate><atom:link href="https://jackliangtw.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Android遊戲-藏詩三百種(大學畢製)</title>
-      <link>https://jackliangtw.github.io/portfolio/work12/</link>
-      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work12/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JS遊戲-小精靈</title>
-      <link>https://jackliangtw.github.io/portfolio/work11/</link>
-      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work11/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JS遊戲-轉珠模擬器</title>
-      <link>https://jackliangtw.github.io/portfolio/work10/</link>
-      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work10/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JS遊戲-黑白棋</title>
-      <link>https://jackliangtw.github.io/portfolio/work9/</link>
-      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work9/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端切版-國泰產險(1)</title>
-      <link>https://jackliangtw.github.io/portfolio/work4/</link>
-      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端切版-國泰產險(2)</title>
-      <link>https://jackliangtw.github.io/portfolio/work5/</link>
-      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work5/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端切版-國泰產險(3)</title>
-      <link>https://jackliangtw.github.io/portfolio/work6/</link>
-      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端切版-國泰產險(4)</title>
-      <link>https://jackliangtw.github.io/portfolio/work7/</link>
-      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端切版-國泰產險(5)</title>
-      <link>https://jackliangtw.github.io/portfolio/work8/</link>
-      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端切版-新秀麗</title>
-      <link>https://jackliangtw.github.io/portfolio/work3/</link>
-      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端切版-白蘭氏</title>
-      <link>https://jackliangtw.github.io/portfolio/work2/</link>
-      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work2/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 17 May 2023 19:41:01 +0530</lastBuildDate><atom:link href="https://jackliangtw.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo Web完整架設流程</title>
       <link>https://jackliangtw.github.io/blog/hugowebwithgithub/</link>
@@ -124,28 +25,6 @@ C槽建立 /hugo/bin 資料夾
 環境變數Path設定新增: C:\Hugo\bin
 cmd檢查hugo指令是否成功: hugo version
 3. Git clone第一步驟(A),(B)到local端 cd 到(B)專案目錄下: (建立新分支main)git checkout -b main (建立readme檔案)touch README.md git add . git commit -m &amp;#34;add README.md&amp;#34; git push origin main cd到(A)路徑中, 建立hugo專案 &amp;amp;&amp;amp; cd到hugo themes中(準備安裝主題) hugo new sit myHugoBlog cd myHugoBlog/themes 選擇想要的Hugo theme主題安裝 git clone https://github.</description>
-    </item>
-    
-    <item>
-      <title>翻書作品集</title>
-      <link>https://jackliangtw.github.io/portfolio/work1/</link>
-      <pubDate>Sat, 05 Nov 2016 19:41:01 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/portfolio/work1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo githubPage架設筆記</title>
-      <link>https://jackliangtw.github.io/test/work1/</link>
-      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/test/work1/</guid>
-      <description>Github新增2個專案: (A)Source code repository / Hugo source code存放 (HugoBlog) (B)Production repository / 展示GithubPage (jackliangtw.github.io) 教學來源:https://youtu.be/LIFvgrRxdt4
-安裝Hugo: win10安裝流程: C槽建立 /hugo/bin 資料夾 https://github.com/gohugoio/hugo/releases (Google 搜尋 hugo release) 下載最新版(amd64.zip) [eg: hugo_extended_0.111.3_windows-amd64.zip] 解壓縮到 C/hugo/bin/ 當中 環境變數Path設定 C:\Hugo\bin cmd檢查hugo指令是否成功: hugo version 參考:
-Git clone(A),(B)到local
-====(只有最初建立時候需要)== START == cd 到(B)下: (建立新分支main)git checkout -b main (建立readme檔案)touch README.md git add . git commit -m &amp;ldquo;add README.md&amp;rdquo; git push origin main
-====(只有最初建立時候需要)== START == cd到(A)路徑中, 建立hugo專案 hugo new sit myHugoBlog</description>
     </item>
     
     <item>

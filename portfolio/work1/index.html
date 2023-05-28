@@ -37,17 +37,17 @@
   <div class="sidebar-content">
     <h1 class="sidebar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
     
-      <p class="sidebar-p">I am soft engineer with more than 5 years of experience.</p>
+      <p class="sidebar-p">I am a soft engineer with more than 5 years of experience.</p>
     
       <p class="sidebar-p">Lived in Taiwan.</p>
     
     <ul class="sidebar-menu">
       
-        <li><a href="https://jackliangtw.github.io/blog/">Portfolio</a></li>
+        <li><a href="https://jackliangtw.github.io/portfolio/">Portfolio</a></li>
       
         <li><a href="https://jackliangtw.github.io/about/">About</a></li>
       
-        <li><a href="https://jackliangtw.github.io/portfolio/">Blog</a></li>
+        <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
       
     </ul>
     <p class="social">
@@ -56,23 +56,33 @@
   
   
   
-  <a href="mailto:k8865432110@gmail.com" data-animate-hover="pulse" class="email" title="E-mail">
+  <a target="blank" href="mailto:k8865432110@gmail.com" data-animate-hover="pulse" class="email" title="E-mail">
     <i class="fa fa-envelope"></i>
   </a>
   
   
   
   
-  <a href="https://github.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitHub" rel="me">
+  <a target="blank" href="https://github.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitHub" rel="me">
     <i class="fa fa-github"></i>
   </a>
   
   
-  <a href="https://gitlab.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitLab" rel="me">
+  <a target="blank" href="https://gitlab.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitLab" rel="me">
     <i class="fa fa-gitlab"></i>
   </a>
   
   
+  
+  
+  <a target="blank" href="https://leetcode.com/JackLiangTW/" data-animate-hover="pulse" class="external" title="LeetCode">
+    <i class="fa fa-code"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://codepen.io/jackliangtw/pens/showcase" data-animate-hover="pulse" class="external" title="CodePen">
+    <i class="fa fa-codepen"></i>
+  </a>
   
 </p>
 
@@ -101,47 +111,8 @@
   <div class="row">
     <div class="col-lg-8">
       <div class="content-column-content">
-         <h1>Hugo githubPage架設筆記</h1>
-         <p>Github新增2個專案:
-(A)Source code repository / Hugo source code存放 (HugoBlog)
-(B)Production repository / 展示GithubPage (jackliangtw.github.io)
-教學來源:https://youtu.be/LIFvgrRxdt4</p>
-<p>安裝Hugo:
-win10安裝流程:
-C槽建立 /hugo/bin 資料夾
-<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>  (Google 搜尋 hugo release)
-下載最新版(amd64.zip) [eg: hugo_extended_0.111.3_windows-amd64.zip]
-解壓縮到 C/hugo/bin/ 當中
-環境變數Path設定 C:\Hugo\bin
-cmd檢查hugo指令是否成功: hugo version
-參考:</p>
-<p>Git clone(A),(B)到local</p>
-<p>====(只有最初建立時候需要)== START ==
-cd 到(B)下:
-(建立新分支main)git checkout -b main
-(建立readme檔案)touch README.md
-git add .
-git commit -m &ldquo;add README.md&rdquo;
-git push origin main</p>
-<p>====(只有最初建立時候需要)== START ==
-cd到(A)路徑中, 建立hugo專案
-hugo new sit myHugoBlog</p>
-<p>(cd到hugo themes中)
-cd myHugoBlog/themes</p>
-<p>選擇想要的hugo theme主題, 複製使用
-<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
-<p>eg:
-git clone <a href="https://github.com/kishaningithub/hugo-creative-portfolio-theme.git">https://github.com/kishaningithub/hugo-creative-portfolio-theme.git</a>
-====(只有最初建立時候需要)== END ==</p>
-<p>cmd目錄在local(A)當中:(把/public源設定到(B)當中, 指令前/public資料夾必須不存在)
-git submodule add -b main <a href="https://github.com/JackLiangTW/jackliangtw.github.io.git">https://github.com/JackLiangTW/jackliangtw.github.io.git</a> public</p>
-<p>(查看/public當中的源是否已更改到(B))
-git remote -v</p>
-<p>在(A) /public當中:
-git add .
-git commit -m &ldquo;Init&rdquo;
-git push origin main</p>
-
+         <h1>翻書作品集</h1>
+         
          
       </div>
     </div>

@@ -111,8 +111,23 @@
   <div class="row">
     <div class="col-lg-8">
       <div class="content-column-content">
-        <h1>Page not found</h1>
-        <p><a href="https://jackliangtw.github.io/">Return to the home page</a>.</p>
+         <h1>Hugo markdown link轉換成&lt;a&gt;時候加上target=blank屬性</h1>
+         <p><a href="https://stackoverflow.com/questions/72046530/can-i-create-links-with-target-blank-in-hugo-posts-content-using-markdown" target="_blank" rel="noopener">參考來源</a></p>
+<p>如果希望Hugo當中的.md檔案中的轉成html時候能夠加上target=&lsquo;blank&rsquo;屬性</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>[链接文字](链接地址)
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">链接地址</span>&gt;链接文字&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span></code></pre></div><p>成為</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>[链接文字](链接地址)
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blank&#39;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">链接地址</span>&gt;链接文字&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span></code></pre></div><p>可以屬用以下步驟:</p>
+<ol>
+<li>創建該檔案 themes\自己所屬用主題名\layouts_default_markup\render-link.html</li>
+<li>在該檔案當中使用以下html</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Destination | safeURL }}&#34;</span><span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">with</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Title</span><span style="color:#960050;background-color:#1e0010">}}</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ . }}&#34;</span><span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}{{</span> <span style="color:#a6e22e">if</span> <span style="color:#a6e22e">strings</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">HasPrefix</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Destination</span>  <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">http</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noopener&#34;</span><span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}</span>&gt;{{ .Text | safeHTML }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span></code></pre></div><p><img src="/img/blog/hugoLinkChange.JPG" alt="結果示意"></p>
+
+         
       </div>
     </div>
   </div>
