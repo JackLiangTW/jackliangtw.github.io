@@ -49,6 +49,8 @@
   </url><url>
     <loc>https://jackliangtw.github.io/blog/serverlessnote/</loc>
   </url><url>
+    <loc>https://jackliangtw.github.io/blog/hugolayoutaddtagexample/</loc>
+  </url><url>
     <loc>https://jackliangtw.github.io/blog/nodejsdynamodbupdateitem/</loc>
   </url><url>
     <loc>https://jackliangtw.github.io/blog/pythonsetawsconfig/</loc>
@@ -62,12 +64,25 @@
     <loc>https://jackliangtw.github.io/blog/</loc>
     <lastmod>2023-05-17T19:41:01+05:30</lastmod>
   </url><url>
+    <loc>https://jackliangtw.github.io/tags/hugoweb/</loc>
+    <lastmod>2023-05-17T19:41:01+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/</loc>
+    <lastmod>2023-05-17T19:41:01+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/hugo/</loc>
+    <lastmod>2016-11-05T18:25:22+05:30</lastmod>
+  </url><url>
     <loc>https://jackliangtw.github.io/test/</loc>
     <lastmod>2016-11-05T18:25:22+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/categories/</loc>
+    <loc>https://jackliangtw.github.io/tags/awsnodejsdynamodb/</loc>
   </url><url>
-    <loc>https://jackliangtw.github.io/tags/</loc>
+    <loc>https://jackliangtw.github.io/tags/awsnodejslambda/</loc>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/awspython/</loc>
+  </url><url>
+    <loc>https://jackliangtw.github.io/categories/</loc>
   </url><url>
     <loc>https://jackliangtw.github.io/about/</loc>
   </url>

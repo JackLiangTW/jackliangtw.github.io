@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Jack Liang&#39;s portfolio and blog</title>
+    <link>https://jackliangtw.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on Jack Liang&#39;s portfolio and blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Nov 2016 18:25:22 +0530</lastBuildDate><atom:link href="https://jackliangtw.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo markdown link轉換成&lt;a&gt;時候加上target=blank屬性</title>
+      <link>https://jackliangtw.github.io/blog/hugochangelinktotargetblank/</link>
+      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/hugochangelinktotargetblank/</guid>
+      <description>參考來源
+如果希望Hugo當中的.md檔案中的轉成html時候能夠加上target=&amp;lsquo;blank&amp;rsquo;屬性
+[链接文字](链接地址) &amp;lt;a href=链接地址&amp;gt;链接文字&amp;lt;/a&amp;gt; 成為
+[链接文字](链接地址) &amp;lt;a target=&amp;#39;blank&amp;#39; href=链接地址&amp;gt;链接文字&amp;lt;/a&amp;gt; 可以屬用以下步驟:
+創建該檔案 themes\自己所屬用主題名\layouts_default_markup\render-link.html 在該檔案當中使用以下html &amp;lt;a href=&amp;#34;{{ .Destination | safeURL }}&amp;#34;{{ with .Title}} title=&amp;#34;{{ . }}&amp;#34;{{ end }}{{ if strings.HasPrefix .Destination &amp;#34;http&amp;#34; }} target=&amp;#34;_blank&amp;#34; rel=&amp;#34;noopener&amp;#34;{{ end }}&amp;gt;{{ .Text | safeHTML }}&amp;lt;/a&amp;gt; </description>
+    </item>
+    
+  </channel>
+</rss>

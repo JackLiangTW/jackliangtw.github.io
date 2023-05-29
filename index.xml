@@ -177,6 +177,23 @@ serverless create --template aws-nodejs --path myNewProjectName 3.建置node.js�
     </item>
     
     <item>
+      <title>Hugo自訂Tag Filter功能筆記</title>
+      <link>https://jackliangtw.github.io/blog/hugolayoutaddtagexample/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/hugolayoutaddtagexample/</guid>
+      <description>Hugo文件
+1. 打開主題當中/layout 目標html Hugo html相關語法: 1. 宣告變數: 文件
+{{ $變數 := &amp;ldquo;某值&amp;rdquo; }}
+&amp;lt;!-- 宣告$myVar變數 = .Params.tags.split(&amp;#39;,&amp;#39;) --&amp;gt; {{ $myVar := split .Params.tags &amp;#34;,&amp;#34; }} 2. Range陣列資料陣列資料案染: 文件
+後面需要{{end}}作結尾包覆
+&amp;lt;!-- 取得index, element寫法 --&amp;gt; {{ range $index, $element := $myVar }} &amp;lt;span&amp;gt;這是Index{{$index}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;這是Element{{$element}}&amp;lt;/span&amp;gt; {{ end }} &amp;lt;!-- 快速寫法 --&amp;gt; {{ range $myVar }} &amp;lt;span&amp;gt;這是Element{{ . }}&amp;lt;/span&amp;gt; {{ end }} 3. if else判斷式 + eq condition判斷: if文件
+eq文件
+{{if}}最後需要{{end}}作結尾包覆
+eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分</description>
+    </item>
+    
+    <item>
       <title>Node.js/AWS Dynamodb UpdateItem</title>
       <link>https://jackliangtw.github.io/blog/nodejsdynamodbupdateitem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

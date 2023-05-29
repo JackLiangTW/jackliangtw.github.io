@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo,Web on Jack Liang&#39;s portfolio and blog</title>
+    <link>https://jackliangtw.github.io/tags/hugoweb/</link>
+    <description>Recent content in Hugo,Web on Jack Liang&#39;s portfolio and blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 May 2023 19:41:01 +0530</lastBuildDate><atom:link href="https://jackliangtw.github.io/tags/hugoweb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Web完整架設流程</title>
+      <link>https://jackliangtw.github.io/blog/hugowebwithgithub/</link>
+      <pubDate>Wed, 17 May 2023 19:41:01 +0530</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/hugowebwithgithub/</guid>
+      <description>Hugo流程參考來源
+Hugo win10安裝教學
+1. Github新增2個專案: (A) Source code repository / Hugo source code存放 (HugoBlog)
+(B) Production repository / 展示GithubPage (jackliangtw.github.io)
+2. 安裝Hugo: win10安裝流程:
+下載安裝Hugo:Hugo release
+C槽建立 /hugo/bin 資料夾
+下載最新版(amd64.zip) [eg: hugo_extended_0.111.3_windows-amd64.zip]
+解壓縮到 C/hugo/bin/ 當中
+環境變數Path設定新增: C:\Hugo\bin
+cmd檢查hugo指令是否成功: hugo version
+3. Git clone第一步驟(A),(B)到local端 cd 到(B)專案目錄下: (建立新分支main)git checkout -b main (建立readme檔案)touch README.md git add . git commit -m &amp;#34;add README.md&amp;#34; git push origin main cd到(A)路徑中, 建立hugo專案 &amp;amp;&amp;amp; cd到hugo themes中(準備安裝主題) hugo new sit myHugoBlog cd myHugoBlog/themes 選擇想要的Hugo theme主題安裝 git clone https://github.</description>
+    </item>
+    
+    <item>
+      <title>Hugo自訂Tag Filter功能筆記</title>
+      <link>https://jackliangtw.github.io/blog/hugolayoutaddtagexample/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/hugolayoutaddtagexample/</guid>
+      <description>Hugo文件
+1. 打開主題當中/layout 目標html Hugo html相關語法: 1. 宣告變數: 文件
+{{ $變數 := &amp;ldquo;某值&amp;rdquo; }}
+&amp;lt;!-- 宣告$myVar變數 = .Params.tags.split(&amp;#39;,&amp;#39;) --&amp;gt; {{ $myVar := split .Params.tags &amp;#34;,&amp;#34; }} 2. Range陣列資料陣列資料案染: 文件
+後面需要{{end}}作結尾包覆
+&amp;lt;!-- 取得index, element寫法 --&amp;gt; {{ range $index, $element := $myVar }} &amp;lt;span&amp;gt;這是Index{{$index}}&amp;lt;/span&amp;gt; &amp;lt;span&amp;gt;這是Element{{$element}}&amp;lt;/span&amp;gt; {{ end }} &amp;lt;!-- 快速寫法 --&amp;gt; {{ range $myVar }} &amp;lt;span&amp;gt;這是Element{{ . }}&amp;lt;/span&amp;gt; {{ end }} 3. if else判斷式 + eq condition判斷: if文件
+eq文件
+{{if}}最後需要{{end}}作結尾包覆
+eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,6 +5,52 @@
     <link>https://jackliangtw.github.io/tags/</link>
     <description>Recent content in Tags on Jack Liang&#39;s portfolio and blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://jackliangtw.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 May 2023 19:41:01 +0530</lastBuildDate><atom:link href="https://jackliangtw.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo,Web</title>
+      <link>https://jackliangtw.github.io/tags/hugoweb/</link>
+      <pubDate>Wed, 17 May 2023 19:41:01 +0530</pubDate>
+      
+      <guid>https://jackliangtw.github.io/tags/hugoweb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://jackliangtw.github.io/tags/hugo/</link>
+      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+      
+      <guid>https://jackliangtw.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS,Nodejs,Dynamodb</title>
+      <link>https://jackliangtw.github.io/tags/awsnodejsdynamodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/tags/awsnodejsdynamodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS,Nodejs,Lambda</title>
+      <link>https://jackliangtw.github.io/tags/awsnodejslambda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/tags/awsnodejslambda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS,Python</title>
+      <link>https://jackliangtw.github.io/tags/awspython/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/tags/awspython/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

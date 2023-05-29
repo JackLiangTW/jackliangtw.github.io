@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Jack Liang&#39;s portfolio and blog</title>
+<meta name="description" content="Jack Liang&#39;s portfolio and blog">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.theme.css">
+
+
+  <link href="https://jackliangtw.github.io/css/style.pink.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://jackliangtw.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://jackliangtw.github.io/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+    
+      <p class="sidebar-p">I am a soft engineer with more than 5 years of experience.</p>
+    
+      <p class="sidebar-p">Lived in Taiwan.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://jackliangtw.github.io/portfolio/">Portfolio</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about/">About</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a target="blank" href="mailto:k8865432110@gmail.com" data-animate-hover="pulse" class="email" title="E-mail">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://github.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitHub" rel="me">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://gitlab.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitLab" rel="me">
+    <i class="fa fa-gitlab"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://leetcode.com/JackLiangTW/" data-animate-hover="pulse" class="external" title="LeetCode">
+    <i class="fa fa-code"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://codepen.io/jackliangtw/pens/showcase" data-animate-hover="pulse" class="external" title="CodePen">
+    <i class="fa fa-codepen"></i>
+  </a>
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2023 Jack Liang |
+        
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>Hugo自訂Tag Filter功能筆記</h1>
+         <p><a href="https://gohugo.io/documentation/" target="_blank" rel="noopener">Hugo文件</a></p>
+<h4 id="1-打開主題當中layout-目標html">1. 打開主題當中/layout 目標html</h4>
+<p><img src="/img/blog/HugoPortofolio.JPG" alt="結果示意"></p>
+<h4 id="hugo-html相關語法">Hugo html相關語法:</h4>
+<h5 id="1-宣告變數">1. 宣告變數:</h5>
+<p><a href="https://gohugo.io/templates/introduction/#example-2-declaring-a-variable-name-for-an-array-elements-value" target="_blank" rel="noopener">文件</a><br>
+{{ $變數 := &ldquo;某值&rdquo; }}</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 宣告$myVar變數 = .Params.tags.split(&#39;,&#39;) --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ $myVar := split .Params.tags &#34;,&#34; }}
+</span></span></code></pre></div><hr>
+<h5 id="2-range陣列資料陣列資料案染">2. Range陣列資料陣列資料案染:</h5>
+<p><a href="https://gohugo.io/functions/range/" target="_blank" rel="noopener">文件</a><br>
+後面需要{{end}}作結尾包覆</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 取得index, element寫法 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ range $index, $element := $myVar }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;這是Index{{$index}}&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;這是Element{{$element}}&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 快速寫法 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ range $myVar }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;這是Element{{ . }}&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><hr>
+<h5 id="3-if-else判斷式--eq-condition判斷">3. if else判斷式 + eq condition判斷:</h5>
+<p><a href="https://gohugo.io/templates/introduction/#example-3-if" target="_blank" rel="noopener">if文件</a><br>
+<a href="https://gohugo.io/functions/eq/" target="_blank" rel="noopener">eq文件</a><br>
+{{if}}最後需要{{end}}作結尾包覆<br>
+eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分<br>
+($myVar | len) == $myVar.length</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 取得index, element寫法 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ if eq ($myVar | len) 0 }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;這是0&lt;/<span style="color:#f92672">span</span>&gt;   
+</span></span><span style="display:flex;"><span>{{ if eq ($myVar | len) 1 }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;這是1&lt;/<span style="color:#f92672">span</span>&gt;   
+</span></span><span style="display:flex;"><span>{{ else }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;這是Others&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><hr>
+<h5 id="4-len長度-arraydictstring">4. len長度: array/dict/string:</h5>
+<p><a href="https://gohugo.io/functions/len/" target="_blank" rel="noopener">文件</a><br>
+{{if}}最後需要{{end}}作結尾包覆<br>
+eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分<br>
+($myVar | len) == $myVar.length</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- String 2 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ &#34;ab&#34; | len }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- String 0 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ &#34;&#34; | len }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Array 2 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ slice &#34;a&#34; &#34;b&#34; | len }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Array 0 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ slice | len }} → 0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Dict/Obj 2 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ dict &#34;a&#34; 1 &#34;b&#34; 2  | len }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Dict/Obj 0 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ dict | len }} → 0
+</span></span></code></pre></div><hr>
+<h4 id="完整html-demo">完整html demo:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-xs-12 col-sm-8 col-md-9 content-column&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clearButtons&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    {{ partial &#34;mobile_nav_toggle.html&#34; . }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;grid&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>          {{ range .Data.Pages }}
+</span></span><span style="display:flex;"><span>              &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item&#34;</span> <span style="color:#a6e22e">tagData</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{.Params.tags}}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box-masonry&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                      {{ if and (isset .Params &#34;image&#34;) .Params.image }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                        {{ if (isset .Params &#34;usedirecturl&#34;) }} <span style="color:#75715e">&lt;!-- 直接倒到外部WebSite --&gt;</span>
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Params.useDirectUrl }}&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box-masonry-image with-hover-overlay&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        {{ else if eq .Params.showonlyimage true }}
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box-masonry-image with-hover-overlay&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        {{ else }}
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box-masonry-image with-hover-overlay with-hover-icon&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        {{ end }}
+</span></span><span style="display:flex;"><span>                            &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{.Params.image | absURL}}&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;img-responsive&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>                      {{ end }}
+</span></span><span style="display:flex;"><span>                      {{ if eq .Params.showonlyimage true }}
+</span></span><span style="display:flex;"><span>                      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box-masonry-hover-text-header&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                      {{ else }}
+</span></span><span style="display:flex;"><span>                      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box-masonry-text&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                      {{ end }}
+</span></span><span style="display:flex;"><span>                          &lt;<span style="color:#f92672">h4</span>&gt;
+</span></span><span style="display:flex;"><span>                            {{ if (isset .Params &#34;usedirecturl&#34;) }} <span style="color:#75715e">&lt;!-- 直接倒到外部WebSite --&gt;</span>
+</span></span><span style="display:flex;"><span>                            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Params.useDirectUrl }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                            {{ else }}
+</span></span><span style="display:flex;"><span>                            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                            {{ end }}
+</span></span><span style="display:flex;"><span>                            {{ .Title }}
+</span></span><span style="display:flex;"><span>                            &lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>                          &lt;/<span style="color:#f92672">h4</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                          {{ if (isset .Params &#34;tags&#34;) }} <span style="color:#75715e">&lt;!-- 做tags Filter功能 --&gt;</span>
+</span></span><span style="display:flex;"><span>                            {{ $myVar := split .Params.tags &#34;,&#34; }}
+</span></span><span style="display:flex;"><span>                            {{ range $index, $element := $myVar }}
+</span></span><span style="display:flex;"><span>                            
+</span></span><span style="display:flex;"><span>                            {{ if eq (mod $index 4) 0 }}
+</span></span><span style="display:flex;"><span>                            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;chooseTag btn-sm btn btn-info&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-top: 8px ;&#34;</span> <span style="color:#a6e22e">tag</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $element }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                            {{ else if eq (mod $index 4) 1 }}
+</span></span><span style="display:flex;"><span>                            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;chooseTag btn-sm btn btn-primary&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-top: 8px ;&#34;</span> <span style="color:#a6e22e">tag</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $element }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                            {{ else if eq (mod $index 4) 2 }}
+</span></span><span style="display:flex;"><span>                            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;chooseTag btn-sm btn btn-warning&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-top: 8px ;&#34;</span> <span style="color:#a6e22e">tag</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $element }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                            {{ else }}
+</span></span><span style="display:flex;"><span>                            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;chooseTag btn-sm btn btn-secondary&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;margin-top: 8px ;&#34;</span> <span style="color:#a6e22e">tag</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $element }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                            {{end}}
+</span></span><span style="display:flex;"><span>                              {{$element}}
+</span></span><span style="display:flex;"><span>                            &lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>                            {{end}}
+</span></span><span style="display:flex;"><span>                          {{end}}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                          {{ if and (isset .Params &#34;showmoretile&#34;) .Params.showmoretile }}
+</span></span><span style="display:flex;"><span>                            <span style="color:#75715e">&lt;!-- 把 Description 關掉 --&gt;</span>
+</span></span><span style="display:flex;"><span>                            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box-masonry-description&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                              &lt;<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>                                  {{ if .Description }}
+</span></span><span style="display:flex;"><span>                                    {{ .Description }}
+</span></span><span style="display:flex;"><span>                                  {{ else }}
+</span></span><span style="display:flex;"><span>                                    {{ .Summary }}
+</span></span><span style="display:flex;"><span>                                  {{ end }}
+</span></span><span style="display:flex;"><span>                              &lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>                            &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>                          {{end}}
+</span></span><span style="display:flex;"><span>                      &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>                  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>              &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>          {{ end }}
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><hr>
+<h4 id="完整js-demo">完整JS demo:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">selectedTag</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>; <span style="color:#75715e">//- 以選擇Tags(Array string)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">btnsFilter</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;button.chooseTag&#39;</span>); <span style="color:#75715e">//- Tag Button ele
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allPanel</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;div.masonry-item&#39;</span>); <span style="color:#75715e">//- Render Context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">clearBtnDiv</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#39;clearButtons&#39;</span>)[<span style="color:#ae81ff">0</span>]; <span style="color:#75715e">//- clear Tag button area
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">btnsFilter</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">button</span>) { <span style="color:#75715e">//- Filter加入Tags
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">theTag</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#39;tag&#39;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">selectedTag</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span>)<span style="color:#a6e22e">selectedTag</span><span style="color:#f92672">=</span>[<span style="color:#a6e22e">theTag</span>]; <span style="color:#75715e">//- isFirst element
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">theTag</span>)){ <span style="color:#75715e">//- 已加入
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">else</span>{ <span style="color:#75715e">//- 加入
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">theTag</span>);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">AddClearButtonRender</span>(<span style="color:#a6e22e">theTag</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">filterRender</span>();
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">AddClearButtonRender</span>(<span style="color:#a6e22e">tagName</span>){ <span style="color:#75715e">//- 加上display:none, display:block
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">button</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;button&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tagName</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>() { <span style="color:#75715e">//- 觸發移除自己Tag
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">button</span>); <span style="color:#75715e">// remove &lt;Button&gt; ele
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">selectedTag</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span>)<span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">idx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">tagName</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">idx</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">idx</span>,<span style="color:#a6e22e">idx</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)<span style="color:#a6e22e">selectedTag</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>; <span style="color:#75715e">//- if no conditions
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">filterRender</span>(); <span style="color:#75715e">//- ReRender context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;btn&#39;</span>,<span style="color:#e6db74">&#39;btn-primary&#39;</span>); <span style="color:#75715e">//- add button css
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;type&#39;</span>, <span style="color:#e6db74">&#34;button&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;tag&#39;</span>, <span style="color:#a6e22e">tagName</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">clearBtnDiv</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">button</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">filterRender</span>(){ <span style="color:#75715e">//- 加上display:none, display:block
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">choosedTag</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">selectedTag</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">selectedTag</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">allPanel</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">ele</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">eleHasTags</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#39;tagData&#39;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">isShow</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">selectedTag</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">tg</span>=&gt;{
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">eleHasTags</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">tg</span>)){
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">isShow</span><span style="color:#f92672">=</span><span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">isShow</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;block&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;none&#34;</span>;
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</span></span></code></pre></div>
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://jackliangtw.github.io/js/jquery.min.js"></script>
+<script src="https://jackliangtw.github.io/js/bootstrap.min.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.cookie.js"> </script>
+<script src="https://jackliangtw.github.io/js/ekko-lightbox.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://jackliangtw.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/owl.carousel.min.js"></script>
+<script src="https://jackliangtw.github.io/js/front.js"></script>
+
+
+
+</body>
+</html>

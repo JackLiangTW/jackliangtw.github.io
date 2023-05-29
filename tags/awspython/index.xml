@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS,Python on Jack Liang&#39;s portfolio and blog</title>
+    <link>https://jackliangtw.github.io/tags/awspython/</link>
+    <description>Recent content in AWS,Python on Jack Liang&#39;s portfolio and blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://jackliangtw.github.io/tags/awspython/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python設定AWS金鑰</title>
+      <link>https://jackliangtw.github.io/blog/pythonsetawsconfig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/pythonsetawsconfig/</guid>
+      <description>cmd指令開啟config參數位置
+nano ~/.aws/config 設定參數如以下
+region = ap-northeast-1 output = json aws_access_key_id = MY_AWS_ACCESS_ID aws_secret_access_key = MY_AWS_SECRET_KEY </description>
+    </item>
+    
+  </channel>
+</rss>
