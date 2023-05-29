@@ -158,7 +158,20 @@ cmd檢查hugo指令是否成功: hugo version</p>
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Init&#34;</span>
 </span></span><span style="display:flex;"><span>git push origin main
 </span></span></code></pre></div><hr>
-<h4 id="7-開發架設指令">7. <strong>開發架設指令</strong></h4>
+<h4 id="7-push源專案a到github">7. <strong>Push源專案(A)到github</strong></h4>
+<h6 id="cd到a-如果themes主題會有問題可以移除該themes中的git">cd到(A), 如果themes主題會有問題可以移除該themes/中的.git:</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd themes
+</span></span><span style="display:flex;"><span>rm hugo-creative-portfolio-theme/.git
+</span></span><span style="display:flex;"><span>選擇全部皆是
+</span></span></code></pre></div><h5 id="此時git-會跳出fatal的錯誤--所以繼續以下步驟">此時git 會跳出fatal的錯誤 =&gt; 所以繼續以下步驟</h5>
+<ol>
+<li>將/themes/hugo-creative-portfolio-theme 整個資料夾移到(A)專案外面</li>
+<li>先做一次commit</li>
+<li>把外面移動的/hugo-creative-portfolio-theme移回(A)的themes/中</li>
+<li>可以正常commit了</li>
+</ol>
+<hr>
+<h4 id="其他開發架設指令">其他<strong>開發架設指令</strong></h4>
 <h6 id="架設專案">架設專案</h6>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
 </span></span></code></pre></div>
