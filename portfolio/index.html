@@ -105,12 +105,13 @@
 
               
   <div class="col-xs-12 col-sm-8 col-md-9 content-column">
-    <div class="clearButtons"></div>
     <div class="small-navbar visible-xs">
   <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
   <h1 class="small-navbar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
 </div>
 
+    <div class="clearButtons"></div>
+    <div class="TagsCategoryButtons" style="margin-bottom: 20px;padding: 12px 5px;border-top: 2px solid firebrick;"></div>
     <div class="grid">
         <div class="row d-flex">
           
@@ -452,21 +453,36 @@
   const btnsFilter = document.querySelectorAll('button.chooseTag');
   const allPanel = document.querySelectorAll('div.masonry-item');
   const clearBtnDiv = document.getElementsByClassName('clearButtons')[0];
+  const TagsCategoryButtons = document.getElementsByClassName('TagsCategoryButtons')[0];
+  
 
   btnsFilter.forEach(function(button) { 
     button.addEventListener('click', function() {
       var theTag = button.getAttribute('tag');
-      if(selectedTag==null)selectedTag=[theTag];
-      else if(selectedTag.includes(theTag)){ 
-        return;
-      }
-      else{ 
-        selectedTag.push(theTag);
-      }
-      AddClearButtonRender(theTag);
-      filterRender();
+      FilterAddTag(theTag);
+      
+      
+      
+      
+      
+      
+      
+      
+      
     });
   });
+
+  function FilterAddTag(theTag){ 
+    if(selectedTag==null)selectedTag=[theTag];
+    else if(selectedTag.includes(theTag)){ 
+      return;
+    }
+    else{ 
+      selectedTag.push(theTag);
+    }
+    AddClearButtonRender(theTag);
+    filterRender();
+  }
 
   function AddClearButtonRender(tagName){ 
     var button = document.createElement('button');
@@ -507,6 +523,33 @@
     });
     $(this)[0].masonry(); 
   }
+
+  function inintRnderCategoryTagsCount(){ 
+    let tagsCount = {};
+    allPanel.forEach(function(ele) {
+      ele.getAttribute('tagData').split(",").forEach(tg=>{
+        if(tagsCount.hasOwnProperty(tg)){tagsCount[tg] += 1;}
+        else{
+          tagsCount[tg] = 1;
+        }
+      })
+    });
+    
+    for (let _key in tagsCount) {
+      var button = document.createElement('button');
+      button.textContent = `${_key}(${tagsCount[_key]>99?"99+":tagsCount[_key]})`;
+      button.addEventListener('click', function() {
+        FilterAddTag(_key);
+      });
+      button.classList.add('btn','btn-primary','btn-sm');
+      button.style.margin = '0 10px 10px 0';
+      button.setAttribute('type', "button");
+      button.setAttribute('tag', _key);
+      TagsCategoryButtons.appendChild(button);
+    }
+  }
+
+  inintRnderCategoryTagsCount();
 
 </script>
 
