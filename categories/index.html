@@ -112,7 +112,7 @@
 </div>
 
     <div class="grid">
-        <div class="row">
+        <div class="row d-flex">
           
         </div>
     </div>
@@ -155,6 +155,7 @@
     });
     
     button.classList.add('btn','btn-primary');
+    button.style.margin = '0 10px 10px 0';
     button.setAttribute('type', "button");
     button.setAttribute('tag', tagName);
     clearBtnDiv.appendChild(button);
@@ -175,6 +176,7 @@
       }
       ele.style.display = isShow ? "block":"none";
     });
+    $(this)[0].masonry(); 
   }
 
 </script>

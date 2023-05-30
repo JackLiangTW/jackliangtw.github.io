@@ -136,19 +136,6 @@ cmd檢查hugo指令是否成功: hugo version
     </item>
     
     <item>
-      <title>Hugo githubPage架設筆記</title>
-      <link>https://jackliangtw.github.io/test/work1/</link>
-      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
-      
-      <guid>https://jackliangtw.github.io/test/work1/</guid>
-      <description>Github新增2個專案: (A)Source code repository / Hugo source code存放 (HugoBlog) (B)Production repository / 展示GithubPage (jackliangtw.github.io) 教學來源:https://youtu.be/LIFvgrRxdt4
-安裝Hugo: win10安裝流程: C槽建立 /hugo/bin 資料夾 https://github.com/gohugoio/hugo/releases (Google 搜尋 hugo release) 下載最新版(amd64.zip) [eg: hugo_extended_0.111.3_windows-amd64.zip] 解壓縮到 C/hugo/bin/ 當中 環境變數Path設定 C:\Hugo\bin cmd檢查hugo指令是否成功: hugo version 參考:
-Git clone(A),(B)到local
-====(只有最初建立時候需要)== START == cd 到(B)下: (建立新分支main)git checkout -b main (建立readme檔案)touch README.md git add . git commit -m &amp;ldquo;add README.md&amp;rdquo; git push origin main
-====(只有最初建立時候需要)== START == cd到(A)路徑中, 建立hugo專案 hugo new sit myHugoBlog</description>
-    </item>
-    
-    <item>
       <title>Hugo markdown link轉換成&lt;a&gt;時候加上target=blank屬性</title>
       <link>https://jackliangtw.github.io/blog/hugochangelinktotargetblank/</link>
       <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
