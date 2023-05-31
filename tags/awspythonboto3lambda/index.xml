@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS,Python,Boto3,Lambda on Jack Liang&#39;s portfolio and blog</title>
+    <link>https://jackliangtw.github.io/tags/awspythonboto3lambda/</link>
+    <description>Recent content in AWS,Python,Boto3,Lambda on Jack Liang&#39;s portfolio and blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://jackliangtw.github.io/tags/awspythonboto3lambda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Boto3 Lambda複製</title>
+      <link>https://jackliangtw.github.io/blog/aws_boto3_lambda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/aws_boto3_lambda/</guid>
+      <description>0. Config相關引入: import boto3 import urllib3 #- [複製Lambda到Local需要] import os #- [複製Lambda到Local需要] import io #- [複製Lambda到Local需要] import zipfile #- [複製Lambda到Local需要] import shutil #- [複製Lambda到Local需要]For Remove folder from botocore.exceptions import ClientError #- For try catch 監聽Boto3各種錯誤資訊 lambda_client = boto3.client(&amp;#34;lambda&amp;#34;, region_name=&amp;#34;ap-northeast-1&amp;#34;) 列出Region全部Lambda functions: Boto3 Lambda Docs
+def ListAllFunctions(useSource = True): try: ll = [] #- retrun list bucket nextMarker = None while True: #- Traverse to keep query items until there is no next page token arg = { &amp;#39;MaxItems&amp;#39;:50 } #- Base on document, once max items can query is 50 if nextMarker: #- next page token arg[&amp;#39;Marker&amp;#39;] = nextMarker response = lambda_client.</description>
+    </item>
+    
+  </channel>
+</rss>

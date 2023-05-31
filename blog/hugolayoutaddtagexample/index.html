@@ -117,14 +117,18 @@
 <p><img src="/img/blog/HugoPortofolio.JPG" alt="結果示意"></p>
 <h4 id="hugo-html相關語法">Hugo html相關語法:</h4>
 <h5 id="1-宣告變數">1. 宣告變數:</h5>
-<p><a href="https://gohugo.io/templates/introduction/#example-2-declaring-a-variable-name-for-an-array-elements-value" target="_blank" rel="noopener">文件</a><br>
-{{ $變數 := &ldquo;某值&rdquo; }}</p>
+<p><a href="https://gohugo.io/templates/introduction/#example-2-declaring-a-variable-name-for-an-array-elements-value" target="_blank" rel="noopener">文件</a></p>
+<blockquote>
+<p><strong>{{ $變數 := &ldquo;某值&rdquo; }}</strong></p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 宣告$myVar變數 = .Params.tags.split(&#39;,&#39;) --&gt;</span>
 </span></span><span style="display:flex;"><span>{{ $myVar := split .Params.tags &#34;,&#34; }}
 </span></span></code></pre></div><hr>
 <h5 id="2-range陣列資料陣列資料案染">2. Range陣列資料陣列資料案染:</h5>
-<p><a href="https://gohugo.io/functions/range/" target="_blank" rel="noopener">文件</a><br>
-後面需要{{end}}作結尾包覆</p>
+<p><a href="https://gohugo.io/functions/range/" target="_blank" rel="noopener">文件</a></p>
+<blockquote>
+<p><strong>後面需要{{end}}作結尾包覆</strong></p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 取得index, element寫法 --&gt;</span>
 </span></span><span style="display:flex;"><span>{{ range $index, $element := $myVar }}
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;這是Index{{$index}}&lt;/<span style="color:#f92672">span</span>&gt;
@@ -138,10 +142,12 @@
 </span></span></code></pre></div><hr>
 <h5 id="3-if-else判斷式--eq-condition判斷">3. if else判斷式 + eq condition判斷:</h5>
 <p><a href="https://gohugo.io/templates/introduction/#example-3-if" target="_blank" rel="noopener">if文件</a><br>
-<a href="https://gohugo.io/functions/eq/" target="_blank" rel="noopener">eq文件</a><br>
-{{if}}最後需要{{end}}作結尾包覆<br>
-eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分<br>
-($myVar | len) == $myVar.length</p>
+<a href="https://gohugo.io/functions/eq/" target="_blank" rel="noopener">eq文件</a></p>
+<blockquote>
+<p><strong>{{if}}最後需要{{end}}作結尾包覆</strong><br>
+<strong>eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分</strong><br>
+<strong>($myVar | len) == $myVar.length</strong></p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 取得index, element寫法 --&gt;</span>
 </span></span><span style="display:flex;"><span>{{ if eq ($myVar | len) 0 }}
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;這是0&lt;/<span style="color:#f92672">span</span>&gt;   
@@ -152,10 +158,12 @@ eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分<br>
 </span></span><span style="display:flex;"><span>{{ end }}
 </span></span></code></pre></div><hr>
 <h5 id="4-len長度-arraydictstring">4. len長度: array/dict/string:</h5>
-<p><a href="https://gohugo.io/functions/len/" target="_blank" rel="noopener">文件</a><br>
-{{if}}最後需要{{end}}作結尾包覆<br>
-eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分<br>
-($myVar | len) == $myVar.length</p>
+<p><a href="https://gohugo.io/functions/len/" target="_blank" rel="noopener">文件</a></p>
+<blockquote>
+<p><strong>{{if}}最後需要{{end}}作結尾包覆</strong><br>
+<strong>eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分</strong><br>
+<strong>($myVar | len) == $myVar.length</strong></p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- String 2 --&gt;</span>
 </span></span><span style="display:flex;"><span>{{ &#34;ab&#34; | len }}
 </span></span><span style="display:flex;"><span>

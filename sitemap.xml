@@ -44,11 +44,19 @@
     <loc>https://jackliangtw.github.io/blog/hugochangelinktotargetblank/</loc>
     <lastmod>2016-11-05T18:25:22+05:30</lastmod>
   </url><url>
+    <loc>https://jackliangtw.github.io/blog/aws_ec2_project_setup_example/</loc>
+  </url><url>
     <loc>https://jackliangtw.github.io/blog/serverlessnote/</loc>
   </url><url>
     <loc>https://jackliangtw.github.io/blog/hugolayoutaddtagexample/</loc>
   </url><url>
     <loc>https://jackliangtw.github.io/blog/nodejsdynamodbupdateitem/</loc>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/aws_boto3_apigateway/</loc>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/aws_boto3_dynamodb/</loc>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/aws_boto3_lambda/</loc>
   </url><url>
     <loc>https://jackliangtw.github.io/blog/pythonsetawsconfig/</loc>
   </url><url>
@@ -70,11 +78,19 @@
     <loc>https://jackliangtw.github.io/tags/hugo/</loc>
     <lastmod>2016-11-05T18:25:22+05:30</lastmod>
   </url><url>
+    <loc>https://jackliangtw.github.io/tags/awsec2nodejsdocker/</loc>
+  </url><url>
     <loc>https://jackliangtw.github.io/tags/awsnodejsdynamodb/</loc>
   </url><url>
     <loc>https://jackliangtw.github.io/tags/awsnodejslambda/</loc>
   </url><url>
     <loc>https://jackliangtw.github.io/tags/awspython/</loc>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/awspythonboto3apigateway/</loc>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/awspythonboto3dynamodb/</loc>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/awspythonboto3lambda/</loc>
   </url><url>
     <loc>https://jackliangtw.github.io/categories/</loc>
   </url><url>

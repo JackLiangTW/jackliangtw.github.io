@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Jack Liang&#39;s portfolio and blog</title>
+<meta name="description" content="Jack Liang&#39;s portfolio and blog">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.theme.css">
+
+
+  <link href="https://jackliangtw.github.io/css/style.pink.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://jackliangtw.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://jackliangtw.github.io/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+    
+      <p class="sidebar-p">I am a soft engineer with more than 5 years of experience.</p>
+    
+      <p class="sidebar-p">Lived in Taiwan.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://jackliangtw.github.io/portfolio/">Portfolio</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about/">About</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a target="blank" href="mailto:k8865432110@gmail.com" data-animate-hover="pulse" class="email" title="E-mail">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://github.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitHub" rel="me">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://gitlab.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitLab" rel="me">
+    <i class="fa fa-gitlab"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://leetcode.com/JackLiangTW/" data-animate-hover="pulse" class="external" title="LeetCode">
+    <i class="fa fa-code"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://codepen.io/jackliangtw/pens/showcase" data-animate-hover="pulse" class="external" title="CodePen">
+    <i class="fa fa-codepen"></i>
+  </a>
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2023 Jack Liang |
+        
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>AWS EC2專案複製架設範例(Dokcer)</h1>
+         <h4 id="需要準備">需要準備:</h4>
+<h6 id="1-建立好ec2-並取得pem金鑰">1. 建立好EC2, 並取得.pem金鑰</h6>
+<h6 id="2-開好ec2-inbound-rule非必須">2. 開好EC2 Inbound Rule(非必須)</h6>
+<h6 id="3-建立好nodejs測試專案">3. 建立好Node.js測試專案</h6>
+<hr>
+<h4 id="0-local專案目錄範例">0. Local專案目錄範例:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls
+</span></span><span style="display:flex;"><span>Mode                 LastWriteTime         Length Name
+</span></span><span style="display:flex;"><span>----                 -------------         ------ ----
+</span></span><span style="display:flex;"><span>-a----       2022/5/11  下午 04:32        <span style="color:#ae81ff">2114799</span> backend.zip  <span style="color:#f92672">(</span>要複製到EC2的專案<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>-a----       2022/3/22  下午 03:04           <span style="color:#ae81ff">1700</span> TestDemo.pem  <span style="color:#f92672">(</span>金鑰<span style="color:#f92672">)</span>
+</span></span></code></pre></div><hr>
+<h4 id="1-ssh到ec2終端機在第0步驟">1. SSH到EC2(終端機在第0步驟):</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i <span style="color:#e6db74">&#34;TestDemo.pem&#34;</span> ec2-user@ec2-XX-XXX-XXX-XXX.ap-northeast-1.compute.amazonaws.com
+</span></span></code></pre></div><hr>
+<h4 id="2-ec2建立dokcer環境">2. EC2建立Dokcer環境:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 更新環境</span>
+</span></span><span style="display:flex;"><span>$ sudo yum update -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 下載Amazon Dokcer 安裝檔:</span>
+</span></span><span style="display:flex;"><span>$ sudo amazon-linux-extras install docker
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 安裝Docker</span>
+</span></span><span style="display:flex;"><span>$ sudo yum install docker
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 取得用戶名</span>
+</span></span><span style="display:flex;"><span>$ echo $USER
+</span></span><span style="display:flex;"><span>ec2-user
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 將用户添加到 docker用戶組, ec2-user = $USER：</span>
+</span></span><span style="display:flex;"><span>$ sudo usermod -aG docker ec2-user
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 以管理員權限啟動Docker</span>
+</span></span><span style="display:flex;"><span>sudo service docker start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (非必須)(有安全風險)始docker指令不用sudo &amp; 允許所有用戶Docker操作。</span>
+</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#ae81ff">666</span> /var/run/docker.sock
+</span></span></code></pre></div><hr>
+<h4 id="3-ec2建立專案資料夾project">3. EC2建立專案資料夾:project:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir project
+</span></span></code></pre></div><hr>
+<h4 id="4-local端複製zip到ec2-project中-終端機再0-local專案目錄">4. Local端複製zip到EC2 /project中 (終端機再0. Local專案目錄):</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i <span style="color:#e6db74">&#34;./TestDemo.pem&#34;</span> backend.zip ec2-user@ec2-XX-XXX-XXX-XXX.ap-northeast-1.compute.amazonaws.com:~/project
+</span></span></code></pre></div><hr>
+<h4 id="5-ec2啟動專案流程終端機ssh到ec2中">5. EC2啟動專案流程(終端機SSH到EC2中):</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 解壓縮專案</span>
+</span></span><span style="display:flex;"><span>$ cd project
+</span></span><span style="display:flex;"><span>$ unzip backend.zip
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 移除zip</span>
+</span></span><span style="display:flex;"><span>$ rm -r backend.zip
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ cd backend
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Docker將該專案建置成Docker Image</span>
+</span></span><span style="display:flex;"><span>docker build -t<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;testDemo:v1&#34;</span> . --no-cache
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Docker Image建置Container</span>
+</span></span><span style="display:flex;"><span>docker run -p 80:80 -d testDemo:v1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Docker查看Container ID</span>
+</span></span><span style="display:flex;"><span>$ docker ps
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 設定Container 發生當機自動重啟</span>
+</span></span><span style="display:flex;"><span>$ docker update --restart unless-stopped &lt;containerId&gt;
+</span></span></code></pre></div><hr>
+
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://jackliangtw.github.io/js/jquery.min.js"></script>
+<script src="https://jackliangtw.github.io/js/bootstrap.min.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.cookie.js"> </script>
+<script src="https://jackliangtw.github.io/js/ekko-lightbox.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://jackliangtw.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/owl.carousel.min.js"></script>
+<script src="https://jackliangtw.github.io/js/front.js"></script>
+
+
+
+</body>
+</html>

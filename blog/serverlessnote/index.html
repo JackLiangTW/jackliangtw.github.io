@@ -128,13 +128,11 @@
 <p><a href="https://www.serverless.com/framework/docs/providers/aws/cli-reference/create" target="_blank" rel="noopener">參考教學</a></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>serverless create --template aws-nodejs --path myNewProjectName
 </span></span></code></pre></div><hr>
-<p>3.建置node.js環境
-cd myNewProjectName
-npm init</p>
-<h4 id="3-nodejs專案設定">3. node.js專案設定:</h4>
+<h4 id="3-nodejs專案設定install裝需要package">3. node.js專案設定(install裝需要package):</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd myNewProjectName
 </span></span><span style="display:flex;"><span>npm init
 </span></span><span style="display:flex;"><span>npm install 
+</span></span><span style="display:flex;"><span>npm install some-need-lib
 </span></span></code></pre></div><hr>
 <h4 id="4-部屬到lambdacmd在yml同一層">4. 部屬到Lambda(cmd在.yml同一層):</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>直接部屬<span style="color:#f92672">)</span>

@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>AWS,EC2,Nodejs,Docker</title>
+      <link>https://jackliangtw.github.io/tags/awsec2nodejsdocker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/tags/awsec2nodejsdocker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>AWS,Nodejs,Dynamodb</title>
       <link>https://jackliangtw.github.io/tags/awsnodejsdynamodb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -49,6 +58,33 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jackliangtw.github.io/tags/awspython/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS,Python,Boto3,ApiGateway</title>
+      <link>https://jackliangtw.github.io/tags/awspythonboto3apigateway/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/tags/awspythonboto3apigateway/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS,Python,Boto3,Dynamodb</title>
+      <link>https://jackliangtw.github.io/tags/awspythonboto3dynamodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/tags/awspythonboto3dynamodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS,Python,Boto3,Lambda</title>
+      <link>https://jackliangtw.github.io/tags/awspythonboto3lambda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/tags/awspythonboto3lambda/</guid>
       <description></description>
     </item>
     

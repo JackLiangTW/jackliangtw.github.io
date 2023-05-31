@@ -149,6 +149,15 @@ cmd檢查hugo指令是否成功: hugo version
     </item>
     
     <item>
+      <title>AWS EC2專案複製架設範例(Dokcer)</title>
+      <link>https://jackliangtw.github.io/blog/aws_ec2_project_setup_example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/aws_ec2_project_setup_example/</guid>
+      <description>需要準備: 1. 建立好EC2, 並取得.pem金鑰 2. 開好EC2 Inbound Rule(非必須) 3. 建立好Node.js測試專案 0. Local專案目錄範例: ls Mode LastWriteTime Length Name ---- ------------- ------ ---- -a---- 2022/5/11 下午 04:32 2114799 backend.zip (要複製到EC2的專案) -a---- 2022/3/22 下午 03:04 1700 TestDemo.pem (金鑰) 1. SSH到EC2(終端機在第0步驟): ssh -i &amp;#34;TestDemo.pem&amp;#34; ec2-user@ec2-XX-XXX-XXX-XXX.ap-northeast-1.compute.amazonaws.com 2. EC2建立Dokcer環境: # 更新環境 $ sudo yum update -y # 下載Amazon Dokcer 安裝檔: $ sudo amazon-linux-extras install docker # 安裝Docker $ sudo yum install docker # 取得用戶名 $ echo $USER ec2-user # 將用户添加到 docker用戶組, ec2-user = $USER： $ sudo usermod -aG docker ec2-user # 以管理員權限啟動Docker sudo service docker start # (非必須)(有安全風險)始docker指令不用sudo &amp;amp; 允許所有用戶Docker操作。 sudo chmod 666 /var/run/docker.</description>
+    </item>
+    
+    <item>
       <title>AWS Serverless筆記</title>
       <link>https://jackliangtw.github.io/blog/serverlessnote/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -159,8 +168,7 @@ cmd檢查hugo指令是否成功: hugo version
 1. 安裝serverless npm i -g serverless 設定AWS權限: 參考教學 serverless IAM登入:
 serverless config credentials --provider aws --key &amp;lt;MyIAM-Key&amp;gt; --secret &amp;lt;MyIAM-SecretKey&amp;gt; aws cli IAM登入:
 aws configure 依造步驟輸入... 2. Serverless 建置 node.js模板: 參考教學
-serverless create --template aws-nodejs --path myNewProjectName 3.建置node.js環境 cd myNewProjectName npm init
-3. node.js專案設定: cd myNewProjectName npm init npm install 4. 部屬到Lambda(cmd在.yml同一層): (直接部屬) sls deploy (部屬到特定region中) sls deploy --region ap-northeast-1 yml參數說明: service: myservice # app and org for use with dashboard.</description>
+serverless create --template aws-nodejs --path myNewProjectName 3. node.js專案設定(install裝需要package): cd myNewProjectName npm init npm install npm install some-need-lib 4. 部屬到Lambda(cmd在.yml同一層): (直接部屬) sls deploy (部屬到特定region中) sls deploy --region ap-northeast-1 yml參數說明: service: myservice # app and org for use with dashboard.</description>
     </item>
     
     <item>
@@ -187,7 +195,39 @@ eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分</des
       
       <guid>https://jackliangtw.github.io/blog/nodejsdynamodbupdateitem/</guid>
       <description>來源
-Update Item 不能 Batch update(批次),一次只能Update一筆(一個id) const AWS = require(&amp;#34;aws-sdk&amp;#34;); AWS.config.update({ region: &amp;#34;ap-northeast-1&amp;#34;, accessKeyId: &amp;#34;AWS--accessKeyId&amp;#34;, secretAccessKey: &amp;#34;AWS--secretAccessKey&amp;#34; }); const docClient = new AWS.DynamoDB.DocumentClient(); const param = { TableName: &amp;#34;UserBackPack&amp;#34;, Key: { uid: abc123456 } , UpdateExpression: &amp;#34;set #key1 = :val1&amp;#34;, ExpressionAttributeNames: { &amp;#34;#key1&amp;#34;: &amp;#34;message&amp;#34; }, ExpressionAttributeValues: { &amp;#34;:val1&amp;#34;: &amp;#34;hello2&amp;#34;, } }; await docClient.update(param).promise(); 參數說明: TableName : Dynamodb資料表Table Key : 該Table partition key(Id) 或 Secondary Id UpdateExpression : 更新參數邏輯, 用下方(4),(5)參數做更新條件 ExpressionAttributeNames : Table Item參數代寫 ExpressionAttributeValues : 更新值參數代寫 </description>
+Update Item 不能 Batch update(批次),一次只能Update一筆(一個id) const AWS = require(&amp;#34;aws-sdk&amp;#34;); AWS.config.update({ region: &amp;#34;ap-northeast-1&amp;#34;, accessKeyId: &amp;#34;AWS--accessKeyId&amp;#34;, secretAccessKey: &amp;#34;AWS--secretAccessKey&amp;#34; }); const docClient = new AWS.DynamoDB.DocumentClient(); const param = { TableName: &amp;#34;UserBackPack&amp;#34;, Key: { uid: abc123456 } , UpdateExpression: &amp;#34;set #key1 = :val1&amp;#34;, ExpressionAttributeNames: { &amp;#34;#key1&amp;#34;: &amp;#34;message&amp;#34; }, ExpressionAttributeValues: { &amp;#34;:val1&amp;#34;: &amp;#34;hello2&amp;#34;, } }; await docClient.update(param).promise(); 參數說明: 1. TableName : Dynamodb資料表Table
+2. Key : 該Table partition key(Id) 或 Secondary Id
+3. UpdateExpression : 更新參數邏輯, 用下方(4),(5)參數做更新條件</description>
+    </item>
+    
+    <item>
+      <title>Python Boto3 ApiGateway刪除/列出</title>
+      <link>https://jackliangtw.github.io/blog/aws_boto3_apigateway/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/aws_boto3_apigateway/</guid>
+      <description>Boto3 ApiGateway Docs
+0. Config相關引入: import boto3 from botocore.exceptions import ClientError #- For try catch 監聽Boto3各種錯誤資訊 client = boto3.client(&amp;#39;apigateway&amp;#39;, region_name=&amp;#34;ap-northeast-1&amp;#34;) 列出Region全部ApiGateway API: def ListAllOfApis(costumeClient): ll = [] #- retrun list bucket try: LastPosition = None while True: #- Traverse to keep query items until there is no next page token arg = { &amp;#39;limit&amp;#39;:500 } #- Base on document, once max items can query is 500 if LastPosition: #- next page token arg[&amp;#39;position&amp;#39;] = LastPosition rr = costumeClient.</description>
+    </item>
+    
+    <item>
+      <title>Python Boto3 Dynamodb刪除/列出</title>
+      <link>https://jackliangtw.github.io/blog/aws_boto3_dynamodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/aws_boto3_dynamodb/</guid>
+      <description>Boto3 Dynamodb Docs
+0. Config相關引入: import boto3 from botocore.exceptions import ClientError #- For try catch 監聽Boto3各種錯誤資訊 db_client = boto3.client(&amp;#39;dynamodb&amp;#39;, region_name=&amp;#34;ap-northeast-1&amp;#34;) 列出Region全部Dynamodb Tables: def ListDbNames(): ll = [] try: LastEvaluatedTableName = None while True: arg = { &amp;#39;Limit&amp;#39;:100 }#- Base on document, once max items can query is 100 if LastEvaluatedTableName: #- next page token arg[&amp;#39;ExclusiveStartTableName&amp;#39;] = LastEvaluatedTableName rr = db_client.list_tables(**arg) LastEvaluatedTableName = rr[&amp;#39;LastEvaluatedTableName&amp;#39;] if &amp;#39;LastEvaluatedTableName&amp;#39; in rr else None ll+=rr[&amp;#39;TableNames&amp;#39;] if not LastEvaluatedTableName: #- no next page token &amp;gt; Break break return ll except ClientError as e: print(&amp;#34;Error Create apiGateway deploy: {}&amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Python Boto3 Lambda複製</title>
+      <link>https://jackliangtw.github.io/blog/aws_boto3_lambda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/aws_boto3_lambda/</guid>
+      <description>0. Config相關引入: import boto3 import urllib3 #- [複製Lambda到Local需要] import os #- [複製Lambda到Local需要] import io #- [複製Lambda到Local需要] import zipfile #- [複製Lambda到Local需要] import shutil #- [複製Lambda到Local需要]For Remove folder from botocore.exceptions import ClientError #- For try catch 監聽Boto3各種錯誤資訊 lambda_client = boto3.client(&amp;#34;lambda&amp;#34;, region_name=&amp;#34;ap-northeast-1&amp;#34;) 列出Region全部Lambda functions: Boto3 Lambda Docs
+def ListAllFunctions(useSource = True): try: ll = [] #- retrun list bucket nextMarker = None while True: #- Traverse to keep query items until there is no next page token arg = { &amp;#39;MaxItems&amp;#39;:50 } #- Base on document, once max items can query is 50 if nextMarker: #- next page token arg[&amp;#39;Marker&amp;#39;] = nextMarker response = lambda_client.</description>
     </item>
     
     <item>
@@ -196,9 +236,7 @@ Update Item 不能 Batch update(批次),一次只能Update一筆(一個id) const
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jackliangtw.github.io/blog/pythonsetawsconfig/</guid>
-      <description>cmd指令開啟config參數位置
-nano ~/.aws/config 設定參數如以下
-region = ap-northeast-1 output = json aws_access_key_id = MY_AWS_ACCESS_ID aws_secret_access_key = MY_AWS_SECRET_KEY </description>
+      <description>cmd指令開啟config參數位置 nano ~/.aws/config 設定參數如以下 region = ap-northeast-1 output = json aws_access_key_id = MY_AWS_ACCESS_ID aws_secret_access_key = MY_AWS_SECRET_KEY </description>
     </item>
     
   </channel>

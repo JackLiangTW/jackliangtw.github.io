@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS,EC2,Nodejs,Docker on Jack Liang&#39;s portfolio and blog</title>
+    <link>https://jackliangtw.github.io/tags/awsec2nodejsdocker/</link>
+    <description>Recent content in AWS,EC2,Nodejs,Docker on Jack Liang&#39;s portfolio and blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://jackliangtw.github.io/tags/awsec2nodejsdocker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS EC2專案複製架設範例(Dokcer)</title>
+      <link>https://jackliangtw.github.io/blog/aws_ec2_project_setup_example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/aws_ec2_project_setup_example/</guid>
+      <description>需要準備: 1. 建立好EC2, 並取得.pem金鑰 2. 開好EC2 Inbound Rule(非必須) 3. 建立好Node.js測試專案 0. Local專案目錄範例: ls Mode LastWriteTime Length Name ---- ------------- ------ ---- -a---- 2022/5/11 下午 04:32 2114799 backend.zip (要複製到EC2的專案) -a---- 2022/3/22 下午 03:04 1700 TestDemo.pem (金鑰) 1. SSH到EC2(終端機在第0步驟): ssh -i &amp;#34;TestDemo.pem&amp;#34; ec2-user@ec2-XX-XXX-XXX-XXX.ap-northeast-1.compute.amazonaws.com 2. EC2建立Dokcer環境: # 更新環境 $ sudo yum update -y # 下載Amazon Dokcer 安裝檔: $ sudo amazon-linux-extras install docker # 安裝Docker $ sudo yum install docker # 取得用戶名 $ echo $USER ec2-user # 將用户添加到 docker用戶組, ec2-user = $USER： $ sudo usermod -aG docker ec2-user # 以管理員權限啟動Docker sudo service docker start # (非必須)(有安全風險)始docker指令不用sudo &amp;amp; 允許所有用戶Docker操作。 sudo chmod 666 /var/run/docker.</description>
+    </item>
+    
+  </channel>
+</rss>

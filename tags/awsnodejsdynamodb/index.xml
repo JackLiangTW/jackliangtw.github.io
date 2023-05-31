@@ -13,7 +13,9 @@
       
       <guid>https://jackliangtw.github.io/blog/nodejsdynamodbupdateitem/</guid>
       <description>來源
-Update Item 不能 Batch update(批次),一次只能Update一筆(一個id) const AWS = require(&amp;#34;aws-sdk&amp;#34;); AWS.config.update({ region: &amp;#34;ap-northeast-1&amp;#34;, accessKeyId: &amp;#34;AWS--accessKeyId&amp;#34;, secretAccessKey: &amp;#34;AWS--secretAccessKey&amp;#34; }); const docClient = new AWS.DynamoDB.DocumentClient(); const param = { TableName: &amp;#34;UserBackPack&amp;#34;, Key: { uid: abc123456 } , UpdateExpression: &amp;#34;set #key1 = :val1&amp;#34;, ExpressionAttributeNames: { &amp;#34;#key1&amp;#34;: &amp;#34;message&amp;#34; }, ExpressionAttributeValues: { &amp;#34;:val1&amp;#34;: &amp;#34;hello2&amp;#34;, } }; await docClient.update(param).promise(); 參數說明: TableName : Dynamodb資料表Table Key : 該Table partition key(Id) 或 Secondary Id UpdateExpression : 更新參數邏輯, 用下方(4),(5)參數做更新條件 ExpressionAttributeNames : Table Item參數代寫 ExpressionAttributeValues : 更新值參數代寫 </description>
+Update Item 不能 Batch update(批次),一次只能Update一筆(一個id) const AWS = require(&amp;#34;aws-sdk&amp;#34;); AWS.config.update({ region: &amp;#34;ap-northeast-1&amp;#34;, accessKeyId: &amp;#34;AWS--accessKeyId&amp;#34;, secretAccessKey: &amp;#34;AWS--secretAccessKey&amp;#34; }); const docClient = new AWS.DynamoDB.DocumentClient(); const param = { TableName: &amp;#34;UserBackPack&amp;#34;, Key: { uid: abc123456 } , UpdateExpression: &amp;#34;set #key1 = :val1&amp;#34;, ExpressionAttributeNames: { &amp;#34;#key1&amp;#34;: &amp;#34;message&amp;#34; }, ExpressionAttributeValues: { &amp;#34;:val1&amp;#34;: &amp;#34;hello2&amp;#34;, } }; await docClient.update(param).promise(); 參數說明: 1. TableName : Dynamodb資料表Table
+2. Key : 該Table partition key(Id) 或 Secondary Id
+3. UpdateExpression : 更新參數邏輯, 用下方(4),(5)參數做更新條件</description>
     </item>
     
   </channel>

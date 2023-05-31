@@ -17,8 +17,7 @@
 1. 安裝serverless npm i -g serverless 設定AWS權限: 參考教學 serverless IAM登入:
 serverless config credentials --provider aws --key &amp;lt;MyIAM-Key&amp;gt; --secret &amp;lt;MyIAM-SecretKey&amp;gt; aws cli IAM登入:
 aws configure 依造步驟輸入... 2. Serverless 建置 node.js模板: 參考教學
-serverless create --template aws-nodejs --path myNewProjectName 3.建置node.js環境 cd myNewProjectName npm init
-3. node.js專案設定: cd myNewProjectName npm init npm install 4. 部屬到Lambda(cmd在.yml同一層): (直接部屬) sls deploy (部屬到特定region中) sls deploy --region ap-northeast-1 yml參數說明: service: myservice # app and org for use with dashboard.</description>
+serverless create --template aws-nodejs --path myNewProjectName 3. node.js專案設定(install裝需要package): cd myNewProjectName npm init npm install npm install some-need-lib 4. 部屬到Lambda(cmd在.yml同一層): (直接部屬) sls deploy (部屬到特定region中) sls deploy --region ap-northeast-1 yml參數說明: service: myservice # app and org for use with dashboard.</description>
     </item>
     
   </channel>
