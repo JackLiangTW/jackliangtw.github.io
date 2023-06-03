@@ -104,14 +104,29 @@
 </div>
 
               
-  <div class="col-xs-12 col-sm-8 col-md-9 content-column">
+  <style>
+@media only screen and (max-width: 820px) {
+  .TagsCategoryButtons {
+    white-space:nowrap;
+    overflow-x: scroll;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 12px 5px;
+    border-top: 2px solid firebrick;
+  }
+  .TagsCategoryButtons button{
+    display: inline-block;
+  }
+}
+</style>
+<div class="col-xs-12 col-sm-8 col-md-9 content-column">
     <div class="small-navbar visible-xs">
   <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
   <h1 class="small-navbar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
 </div>
 
-    <div class="clearButtons"></div>
-    <div class="TagsCategoryButtons" style="margin-bottom: 20px;padding: 12px 5px;border-top: 2px solid firebrick;"></div>
+    <div class="clearButtons"></div>    
+    <div class="TagsCategoryButtons"></div>
     <div class="grid">
         <div class="row d-flex">
           
@@ -292,9 +307,20 @@
       return;
     }
     
-    for (let _key in tagsCount) {
+    
+    let arrayData = [];
+    for(let _key in tagsCount){
+      arrayData.push([_key, tagsCount[_key]]);
+    }
+    arrayData.sort(function(a, b) { 
+      return b[1] - a[1];
+    });
+        
+    for (let itm of arrayData) {
+      const _key = itm[0];
+      const _nb = itm[1];
       var button = document.createElement('button');
-      button.textContent = `${_key}(${tagsCount[_key]>99?"99+":tagsCount[_key]})`;
+      button.textContent = `${_key}(${_nb>99?"99+":tagsCount[_key]})`;
       button.addEventListener('click', function() {
         FilterAddTag(_key);
       });

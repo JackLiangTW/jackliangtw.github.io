@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>演算法,JS on Jack Liang&#39;s portfolio and blog</title>
+    <link>https://jackliangtw.github.io/tags/%E6%BC%94%E7%AE%97%E6%B3%95js/</link>
+    <description>Recent content in 演算法,JS on Jack Liang&#39;s portfolio and blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://jackliangtw.github.io/tags/%E6%BC%94%E7%AE%97%E6%B3%95js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>演算法:四則運算</title>
+      <link>https://jackliangtw.github.io/blog/algorithm_arithmetic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/algorithm_arithmetic/</guid>
+      <description>題目說明: 對一四則運算字串, 在不使用套件情況下將其運算完畢 eg: Input:&amp;quot;(3+4)*2&amp;quot;, Output:14 解題說明: 1. 先把String字串依據運算符號+左右括號切成陣列 2. while loop將所有&amp;rsquo;(&amp;lsquo;的index位置加入到Idxs_Conclude中, 遇到&amp;rsquo;)&amp;lsquo;實則開始用算到上一個&amp;quot;(&amp;quot;, 運算完後將值寫到起始位(lastIdx) 3. 把沒有括號的運酸都丟給Calculate_without_brackets做運算 4. Calculate_without_brackets:先做乘除(*/) 再做 加減(+-) 運算, 乘除完後直接將值寫到起始位(i-1) 5. 步驟4後再做一次Calculate_without_brackets, 後還須將 +-*/ 剩餘完成 Full Code: function Calculate_Invoke(signals){ //- signals = string, eg:&amp;#34;3+4*2&amp;#34; // 使用正則表達式將表達式拆分成元素 eg: &amp;#34;3+4*2&amp;#34; =&amp;gt; [&amp;#34;3&amp;#34;, &amp;#34;+&amp;#34;, &amp;#34;4&amp;#34;, &amp;#34;*&amp;#34;, &amp;#34;2&amp;#34;] let elements = signals.split(/(\+|\-|\*|\/|\(|\))/).filter(e =&amp;gt; e.trim() !== &amp;#34;&amp;#34;); let i = 0; let Idxs_Conclude = []; //- Stacks For 左括號 &amp;#34;(&amp;#34; 各index位置 while(i&amp;lt;elements.length){ let ele = elements[i]; if(ele == &amp;#34;(&amp;#34;){ Idxs_Conclude.</description>
+    </item>
+    
+  </channel>
+</rss>

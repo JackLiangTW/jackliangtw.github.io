@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Jack Liang&#39;s portfolio and blog</title>
+<meta name="description" content="Jack Liang&#39;s portfolio and blog">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.theme.css">
+
+
+  <link href="https://jackliangtw.github.io/css/style.pink.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://jackliangtw.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://jackliangtw.github.io/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+    
+      <p class="sidebar-p">I am a soft engineer with more than 5 years of experience.</p>
+    
+      <p class="sidebar-p">Lived in Taiwan.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://jackliangtw.github.io/portfolio/">Portfolio</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about/">About</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a target="blank" href="mailto:k8865432110@gmail.com" data-animate-hover="pulse" class="email" title="E-mail">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://github.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitHub" rel="me">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://gitlab.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitLab" rel="me">
+    <i class="fa fa-gitlab"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://leetcode.com/JackLiangTW/" data-animate-hover="pulse" class="external" title="LeetCode">
+    <i class="fa fa-code"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://codepen.io/jackliangtw/pens/showcase" data-animate-hover="pulse" class="external" title="CodePen">
+    <i class="fa fa-codepen"></i>
+  </a>
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2023 Jack Liang |
+        
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>演算法:四則運算</h1>
+         <h4 id="題目說明">題目說明:</h4>
+<h6 id="對一四則運算字串-在不使用套件情況下將其運算完畢">對一四則運算字串, 在不使用套件情況下將其運算完畢</h6>
+<h6 id="eg-input342-output14">eg: Input:&quot;(3+4)*2&quot;, Output:14</h6>
+<hr>
+<h4 id="解題說明">解題說明:</h4>
+<h6 id="1-先把string字串依據運算符號左右括號切成陣列">1. 先把String字串依據運算符號+左右括號切成陣列</h6>
+<h6 id="2-while-loop將所有的index位置加入到idxs_conclude中-遇到實則開始用算到上一個-運算完後將值寫到起始位lastidx">2. while loop將所有&rsquo;(&lsquo;的index位置加入到Idxs_Conclude中, 遇到&rsquo;)&lsquo;實則開始用算到上一個&quot;(&quot;, 運算完後將值寫到起始位(lastIdx)</h6>
+<h6 id="3-把沒有括號的運酸都丟給calculate_without_brackets做運算">3. 把沒有括號的運酸都丟給Calculate_without_brackets做運算</h6>
+<h6 id="4-calculate_without_brackets先做乘除-再做-加減--運算-乘除完後直接將值寫到起始位i-1">4. Calculate_without_brackets:先做乘除(*/) 再做 加減(+-) 運算, 乘除完後直接將值寫到起始位(i-1)</h6>
+<h6 id="5-步驟4後再做一次calculate_without_brackets-後還須將---剩餘完成">5. 步驟4後再做一次Calculate_without_brackets, 後還須將 +-*/ 剩餘完成</h6>
+<h4 id="full-code">Full Code:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Calculate_Invoke</span>(<span style="color:#a6e22e">signals</span>){ <span style="color:#75715e">//- signals = string, eg:&#34;3+4*2&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 使用正則表達式將表達式拆分成元素 eg: &#34;3+4*2&#34; =&gt; [&#34;3&#34;, &#34;+&#34;, &#34;4&#34;, &#34;*&#34;, &#34;2&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">signals</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">/(\+|\-|\*|\/|\(|\))/</span>).<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">e</span> =&gt; <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">trim</span>() <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">Idxs_Conclude</span> <span style="color:#f92672">=</span> []; <span style="color:#75715e">//- Stacks For 左括號 &#34;(&#34; 各index位置
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">elements</span>.<span style="color:#a6e22e">length</span>){ 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ele</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">elements</span>[<span style="color:#a6e22e">i</span>];
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">ele</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;(&#34;</span>){ <span style="color:#a6e22e">Idxs_Conclude</span>.<span style="color:#a6e22e">unshift</span>(<span style="color:#a6e22e">i</span>); } <span style="color:#75715e">//- 紀錄 &#34;(&#34; index位置
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">i</span><span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">ele</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;)&#34;</span>){ <span style="color:#75715e">//- 遇到&#34;)&#34;開始運算到上一個&#34;(&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lastIdx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Idxs_Conclude</span>.<span style="color:#a6e22e">shift</span>(); <span style="color:#75715e">//- 找上一個 左括號 &#34;(&#34; index位置
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">t1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">elements</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">lastIdx</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">i</span><span style="color:#f92672">-</span><span style="color:#a6e22e">lastIdx</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>); <span style="color:#75715e">//- 切掉 &#34;(&#34; , ... , &#34;)&#34; 的運算值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">newV</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Calculate_without_brackets</span>( <span style="color:#a6e22e">t1</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">t1</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) ); <span style="color:#75715e">//- 傳入括號內的 運算
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">elements</span>[<span style="color:#a6e22e">lastIdx</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">newV</span>; <span style="color:#75715e">//- 將原 &#34;(&#34;值改成運算完()內的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#a6e22e">lastIdx</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">//- i位置回調成 &#34;(&#34;下一位
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Calculate_without_brackets</span>(<span style="color:#a6e22e">elements</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Calculate_without_brackets</span>(<span style="color:#a6e22e">datas</span>){ <span style="color:#75715e">//- datas = 沒有括號的四則運算
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">datas</span>.<span style="color:#a6e22e">length</span>){ <span style="color:#75715e">//- 先只做 */ 運算
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ele</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">datas</span>[<span style="color:#a6e22e">i</span>];
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">ele</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">ele</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;*&#34;</span>){
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//- 把datas[i-1] : 值設成運算完成值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">ele</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;*&#34;</span>)<span style="color:#a6e22e">datas</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">datas</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) <span style="color:#f92672">*</span> parseInt(<span style="color:#a6e22e">datas</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>{ <span style="color:#a6e22e">datas</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">datas</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) <span style="color:#f92672">/</span> parseInt(<span style="color:#a6e22e">datas</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]); }
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">//- 運算位置調回i-1:重設點
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">datas</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">i</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>); <span style="color:#75715e">//- 切掉後面運算完成元素 (+-*/) + (NaN)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>{<span style="color:#a6e22e">i</span><span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>;}
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ans</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//- 目前值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">lastOper</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;+&#34;</span>; <span style="color:#75715e">//- 鎖藥使用運算符號(預設為+)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">v</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">datas</span>){ <span style="color:#75715e">//- 做只剩 +- 運算
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;+&#34;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">v</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;-&#34;</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">lastOper</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">v</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span>{ <span style="color:#75715e">//- 用最後運算符號 與現在v 做運算
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">lastOper</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;+&#34;</span>){
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">ans</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ans</span> <span style="color:#f92672">+</span> parseInt(<span style="color:#a6e22e">v</span>);
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">ans</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ans</span> <span style="color:#f92672">-</span> parseInt(<span style="color:#a6e22e">v</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ans</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">q</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;((9-8)*(6+2))-(3 + 4) * 2 - 5&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">Calculate_Invoke</span>(<span style="color:#a6e22e">q</span>) ); <span style="color:#75715e">// -11
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">q2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;(6 + 2) * 3 / 4&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">Calculate_Invoke</span>(<span style="color:#a6e22e">q2</span>) ); <span style="color:#75715e">//- 6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">q3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;6 + 9 * 3 - 7 + 2 * 4 / 2&#34;</span>; <span style="color:#75715e">//- 30
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">Calculate_Invoke</span>(<span style="color:#a6e22e">q3</span>) );
+</span></span></code></pre></div><hr>
+
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://jackliangtw.github.io/js/jquery.min.js"></script>
+<script src="https://jackliangtw.github.io/js/bootstrap.min.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.cookie.js"> </script>
+<script src="https://jackliangtw.github.io/js/ekko-lightbox.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://jackliangtw.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/owl.carousel.min.js"></script>
+<script src="https://jackliangtw.github.io/js/front.js"></script>
+
+
+
+</body>
+</html>
