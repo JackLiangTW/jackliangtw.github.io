@@ -132,6 +132,15 @@ def ListAllFunctions(useSource = True): try: ll = [] #- retrun list bucket nextM
     </item>
     
     <item>
+      <title>演算法:列出全部組合可能</title>
+      <link>https://jackliangtw.github.io/blog/algorithm_permutations_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackliangtw.github.io/blog/algorithm_permutations_1/</guid>
+      <description>題目說明: 給定不重複正整數 m 種類型 m1 m2 m3 &amp;hellip;， 每種類型對應正整數數量為 n1 n2 n3 &amp;hellip;， 需要取出正整數 p 個任意類型，請列出所有!!取法!! eg: Apple:3、Banana:2、Citron:4，要取出三個，則取法有: [ Apple-3, Apple-2/Banana-1, Apple-2/Citron-1, &amp;hellip; ] 解題說明: 1. 宣告變數mem用來存取前面算到的排列組合情況 eg: mem = { 1:[ /.目前拿1個的情況./], 2:[ /.目前拿2個的情況./], &amp;hellip; , p:[] } 2. for loop跑種類 3. Inside(2.) for loop跑 max(該種類最大值, p-1) ~ 1 為防止計算到重覆結果, 先重最大值開始算, 因為mem[i+1].push會使從小開始算造成重複解 4. Inside(3.) for loop跑 mem 當中 (p-i) ~ 1, i和 (p-i : 達到目標) - (1 : 前面只拿一種組合) 組合合併變成新可能 5.</description>
+    </item>
+    
+    <item>
       <title>演算法:四則運算</title>
       <link>https://jackliangtw.github.io/blog/algorithm_arithmetic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
