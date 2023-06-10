@@ -9,11 +9,11 @@
     <lastBuildDate>Thu, 25 May 2023 14:33:01 +0530</lastBuildDate><atom:link href="https://jackliangtw.github.io/portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AmyMusic</title>
-      <link>https://jackliangtw.github.io/portfolio/work8/</link>
+      <link>https://jackliangtw.github.io/portfolio/amymusic/</link>
       <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
       
-      <guid>https://jackliangtw.github.io/portfolio/work8/</guid>
-      <description>哈囉 </description>
+      <guid>https://jackliangtw.github.io/portfolio/amymusic/</guid>
+      <description>技術架構 Node.js / Express / Mongodb / Puppeteer爬蟲 / GCP App Engine / Socket.io 使用 Node.js Express框架架設網站, 部屬到GCP App Engine Puppeteer爬蟲蒐集Youtube清單到Mongodb中, 紀錄Youtube video Id, 影片title等 使用Socket.io製作聊天室功能,可以聊天以及分享歌單 Mongodb Tables: Users: 訪客登入, 可以記錄該人所創立的歌單 ShareLists: 播放清單, MessageLists: 聊天紀錄/歌單分享, DefaultCategory: 預設清單分類(搜尋欄下方一排按鈕:華語男歌手,&amp;hellip;.) UserFavoriteList: 使用者最愛清單 前端架構說明: JS / JQuery / Cookie / Socket.io / Youtube Embed API 右邊部分為住播放區, 左邊為聊天室,可以傳輸訊息和分享自己的歌單 已分享歌單清單, 都為玩家分享的歌單 支援搜尋功能, Node.js後端直接打request去Youtube網頁搜尋並解析Video Id/ Title 右邊加入自訂歌單撥放器 手機板演示 </description>
     </item>
     
     <item>
@@ -49,6 +49,15 @@
       <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
       
       <guid>https://jackliangtw.github.io/portfolio/work9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>社區物業系統</title>
+      <link>https://jackliangtw.github.io/portfolio/ezcon/</link>
+      <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
+      
+      <guid>https://jackliangtw.github.io/portfolio/ezcon/</guid>
       <description></description>
     </item>
     
