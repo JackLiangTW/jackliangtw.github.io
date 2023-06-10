@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jackliangtw.github.io/portfolio/work8/</loc>
+    <lastmod>2023-05-25T14:33:01+05:30</lastmod>
+  </url><url>
     <loc>https://jackliangtw.github.io/portfolio/work12/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
@@ -14,31 +17,31 @@
     <loc>https://jackliangtw.github.io/portfolio/work9/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/portfolio/work4/</loc>
+    <loc>https://jackliangtw.github.io/portfoliobackup/work4/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/portfolio/work5/</loc>
+    <loc>https://jackliangtw.github.io/portfoliobackup/work5/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/portfolio/work6/</loc>
+    <loc>https://jackliangtw.github.io/portfoliobackup/work6/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/portfolio/work7/</loc>
+    <loc>https://jackliangtw.github.io/portfoliobackup/work7/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/portfolio/work8/</loc>
+    <loc>https://jackliangtw.github.io/portfoliobackup/work8/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/portfolio/work3/</loc>
+    <loc>https://jackliangtw.github.io/portfoliobackup/work3/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/portfolio/work2/</loc>
+    <loc>https://jackliangtw.github.io/portfoliobackup/work2/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
     <loc>https://jackliangtw.github.io/blog/hugowebwithgithub/</loc>
     <lastmod>2023-05-17T19:41:01+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/portfolio/work1/</loc>
+    <loc>https://jackliangtw.github.io/portfoliobackup/work1/</loc>
     <lastmod>2016-11-05T19:41:01+05:30</lastmod>
   </url><url>
     <loc>https://jackliangtw.github.io/blog/hugochangelinktotargetblank/</loc>
@@ -65,6 +68,9 @@
     <loc>https://jackliangtw.github.io/blog/algorithm_arithmetic/</loc>
   </url><url>
     <loc>https://jackliangtw.github.io/</loc>
+    <lastmod>2023-05-25T14:33:01+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/portfoliobackup/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
     <loc>https://jackliangtw.github.io/portfolio/</loc>
