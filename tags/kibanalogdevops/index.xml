@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kibana,Log,DevOps on Jack Liang&#39;s portfolio and blog</title>
+    <link>https://jackliangtw.github.io/tags/kibanalogdevops/</link>
+    <description>Recent content in Kibana,Log,DevOps on Jack Liang&#39;s portfolio and blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Apr 2026 11:10:00 +0530</lastBuildDate>
+    <atom:link href="https://jackliangtw.github.io/tags/kibanalogdevops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kibana Discover 查詢:KQL 語法與踩過的坑</title>
+      <link>https://jackliangtw.github.io/blog/kibana_kql_tips/</link>
+      <pubDate>Tue, 21 Apr 2026 11:10:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/blog/kibana_kql_tips/</guid>
+      <description>&lt;h2 id=&#34;discover-基本流程&#34;&gt;Discover 基本流程&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Kibana 左側 → &lt;strong&gt;Discover&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;li&gt;右上選時間範圍(&lt;code&gt;now-15m&lt;/code&gt;、&lt;code&gt;now-7d/d&lt;/code&gt; 等)。&lt;/li&gt;&#xA;&lt;li&gt;上方搜尋框輸入 KQL;左側用 &lt;strong&gt;Add filter&lt;/strong&gt; 建結構化條件。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;kql-語法重點&#34;&gt;KQL 語法重點&lt;/h2&gt;&#xA;&lt;p&gt;KQL 與 Lucene 不同;常見 pipeline 語法(Observability / Security 端):&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-kql&#34; data-lang=&#34;kql&#34;&gt;AppLogs&#xA;| where request_body has &amp;#39;3a117b9e-6c38-10db-8003-5c092426e0ef&amp;#39;&#xA;| where path : &amp;#34;POST /api/orders&amp;#34;&#xA;| sort @timestamp desc&#xA;| limit 50&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;has&lt;/code&gt; 做部分字串比對;&lt;code&gt;==&lt;/code&gt; / &lt;code&gt;:&lt;/code&gt; 做完全匹配。&lt;/li&gt;&#xA;&lt;li&gt;多個條件用 &lt;code&gt;|&lt;/code&gt; 串 &lt;code&gt;where&lt;/code&gt;,比一整行用 &lt;code&gt;and&lt;/code&gt; 可讀性高。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;兩個踩過的坑&#34;&gt;兩個踩過的坑&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;查 &lt;code&gt;request_body&lt;/code&gt; 要帶前綴&lt;/strong&gt;:有時 log 是 JSON-escape 過後的字串,原本的 &lt;code&gt;34717482768&lt;/code&gt; 會被 tokenize 成 &lt;code&gt;&amp;quot;x2234717482768&amp;quot;&lt;/code&gt; 之類的格式,得用 &lt;code&gt;x2234717482768&lt;/code&gt; 才能命中。看 raw document 確認 tokenizer 後的實際值。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;先 Add filter,再細化&lt;/strong&gt;:常用欄位(&lt;code&gt;env&lt;/code&gt;, &lt;code&gt;service&lt;/code&gt;, &lt;code&gt;level&lt;/code&gt;)用 filter UI 固定住比較快,搜尋框只放本次特殊條件,避免一行塞到底又長又錯。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;分享--保存&#34;&gt;分享 / 保存&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;URL 本身會把查詢與時間範圍 encode 在 query string → 直接複製丟給同事即可。&lt;/li&gt;&#xA;&lt;li&gt;需要固定的視圖做成 Dashboard 或 Saved Search,比每次手打 KQL 好。&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

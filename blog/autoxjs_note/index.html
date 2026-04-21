@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Jack Liang&#39;s portfolio and blog</title>
+<meta name="description" content="Jack Liang&#39;s portfolio and blog">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.theme.css">
+
+
+  <link href="https://jackliangtw.github.io/css/style.pink.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://jackliangtw.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://jackliangtw.github.io/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+    
+      <p class="sidebar-p">I am a soft engineer with more than 5 years of experience.</p>
+    
+      <p class="sidebar-p">Lived in Taiwan.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://jackliangtw.github.io/portfolio/">Portfolio</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about/">About</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about-en/">About (EN)</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a target="blank" href="mailto:k8865432110@gmail.com" data-animate-hover="pulse" class="email" title="E-mail">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://github.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitHub" rel="me">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://gitlab.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitLab" rel="me">
+    <i class="fa fa-gitlab"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://leetcode.com/u/k8865432110/" data-animate-hover="pulse" class="external" title="LeetCode">
+    <i class="fa fa-code"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://codepen.io/jackliangtw/pens/showcase" data-animate-hover="pulse" class="external" title="CodePen">
+    <i class="fa fa-codepen"></i>
+  </a>
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2023 Jack Liang |
+        
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>AutoX.js 實戰:UiSelector、Threads、Floaty 與 webpack 打包</h1>
+         <h2 id="引擎與生態">引擎與生態</h2>
+<ul>
+<li><strong>AutoX.js</strong>:基於 Rhino(Java 寫的 JS 引擎),<strong>不相容 Node.js</strong>,npm 套件只能用純 JS 且不吃 Node API。只支援 ES5 + 部分 ES6。社群活躍、免費。</li>
+<li><strong>Auto.js Pro 9</strong>:改用 Node.js,支援 npm,效能比 Rhino 快約 100×,ES2021+;付費。</li>
+<li>兩者 API 類似但不完全相容,新開專案優先確定要用哪個。</li>
+<li>Android 10 以下 <code>auto.root</code> 在 AutoX.js 6.6.0 / 6.6.7 都會丟錯(<a href="https://github.com/kkevsekk1/AutoX/issues/723" target="_blank" rel="noopener">Issue #723</a>);仍可用 <code>select(...).findOne()</code> 系列 API 繞過。</li>
+<li><strong>備用 repo</strong>:原作者的 <code>kkevsekk1/AutoX</code> 已停止維護,社群目前主要 release 都集中在 fork <code>aiselp/AutoX</code>,新版 APK 請到這邊下載:<a href="https://github.com/aiselp/AutoX/releases?page=1" target="_blank" rel="noopener">https://github.com/aiselp/AutoX/releases?page=1</a>。</li>
+</ul>
+<h2 id="uiselector--uiobject--uicollection">UiSelector / UiObject / UiCollection</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// 單一控件
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">btn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">id</span>(<span style="color:#e6db74">&#39;com.app:id/login&#39;</span>).<span style="color:#a6e22e">findOne</span>();    <span style="color:#75715e">// 阻塞到找到
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">btn</span>.<span style="color:#a6e22e">click</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">maybe</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">id</span>(<span style="color:#e6db74">&#39;com.app:id/ok&#39;</span>).<span style="color:#a6e22e">findOne</span>(<span style="color:#ae81ff">2000</span>); <span style="color:#75715e">// 2 秒超時回 null
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">maybe</span>) <span style="color:#a6e22e">maybe</span>.<span style="color:#a6e22e">click</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">now</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#39;確定&#39;</span>).<span style="color:#a6e22e">findOnce</span>();              <span style="color:#75715e">// 不阻塞,找不到立刻回 null
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 集合
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">items</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">className</span>(<span style="color:#e6db74">&#39;android.widget.TextView&#39;</span>).<span style="color:#a6e22e">find</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">it</span> =&gt; <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">it</span>.<span style="color:#a6e22e">text</span>()));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 父子關係
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">btn</span>.<span style="color:#a6e22e">parent</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">firstChild</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">child</span>(<span style="color:#ae81ff">0</span>);
+</span></span></code></pre></div><h2 id="點擊--手勢--螢幕">點擊 / 手勢 / 螢幕</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// 控件 clickable=false 時改用座標點擊
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">btn</span>.<span style="color:#a6e22e">bounds</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">centerX</span>(), <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">centerY</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 全局滑動
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">gesture</span>(<span style="color:#ae81ff">500</span>, [<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">1500</span>], [<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">500</span>]);          <span style="color:#75715e">// 500ms 往上滑
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">home</span>(); <span style="color:#a6e22e">back</span>(); <span style="color:#a6e22e">recents</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sleep</span>(<span style="color:#ae81ff">1000</span>); <span style="color:#a6e22e">toast</span>(<span style="color:#e6db74">&#39;done&#39;</span>);
+</span></span></code></pre></div><h2 id="threads--execscript-的雷">Threads &amp; execScript 的雷</h2>
+<ul>
+<li><code>threads.shutDownAll()</code> 會殺掉 <strong>main + 所有 threads.start() 啟的 sub-thread</strong>,包括你用 <code>execScript()</code> 跑起來的腳本。</li>
+<li><code>threads.start(fn)</code> 啟動的 sub-thread <strong>接收不到 events.emit() 從其他腳本發的事件</strong>——event 通道有 scope 限制。</li>
+<li>想跨腳本通訊要走 <code>engines.execScriptFile()</code> / <code>engines.execScript()</code> 啟動另一個 engine,event 才能雙向。</li>
+</ul>
+<h2 id="const-在-for-loop-裡的-rhino-bug"><code>const</code> 在 for loop 裡的 Rhino bug</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// ❌ 被這寫法咬過:所有 iteration 讀到的 row 都是「第一個值」
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">row</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">rows</span>) { <span style="color:#75715e">/* ... */</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ 改成 let / var
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">row</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">rows</span>) { <span style="color:#75715e">/* ... */</span> }
+</span></span></code></pre></div><p>Rhino 實作 let/const 的 scope 有 bug,for loop + const 會退化成 var 但 closure 綁錯。</p>
+<h2 id="浮動視窗-floaty-技巧">浮動視窗 (Floaty) 技巧</h2>
+<ul>
+<li><code>floaty.window(layout)</code> 建立的懸浮視窗會<strong>遮擋底下控件的 <code>id()</code> 查找</strong>;此時改用 <code>text()</code> 或 <code>desc()</code> 可能有效。</li>
+<li>懸浮視窗啟動後要用 <code>threads.start(() =&gt; engines.execScriptFile(...))</code> 執行主邏輯,<strong>不要擋住 UI thread</strong>。</li>
+<li>input 在 floaty 裡常叫不出系統鍵盤;可在 <code>touch_down</code> event 裡呼 <code>requestFocus()</code> 手動觸發。</li>
+</ul>
+<h2 id="threads-監聽關廣告--同意彈窗">Threads 監聽關廣告 / 同意彈窗</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// 啟動前掛一個背景偵測
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">threads</span>.<span style="color:#a6e22e">start</span>(<span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ad</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#39;跳過&#39;</span>).<span style="color:#a6e22e">findOne</span>(<span style="color:#ae81ff">300</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ad</span>) <span style="color:#a6e22e">ad</span>.<span style="color:#a6e22e">click</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 主流程照跑
+</span></span></span></code></pre></div><h2 id="列表滑到底">列表滑到底</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">scrollForward</span>()) <span style="color:#a6e22e">sleep</span>(<span style="color:#ae81ff">300</span>);       <span style="color:#75715e">// scrollForward 回傳 false 就是到底
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 若 UI 是動態 loading,要在 while 內額外判斷 &#34;新 item 數 &gt; 舊 item 數&#34;
+</span></span></span></code></pre></div><h2 id="webpack-打包webpack-autojs">Webpack 打包(webpack-autojs)</h2>
+<pre tabindex="0"><code>work/
+  my-project/
+    src/main.js
+  scriptConfig.js
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// scriptConfig.js
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">projects</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;my-project&#39;</span>, <span style="color:#a6e22e">entry</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src/main.js&#39;</span>, <span style="color:#a6e22e">compile</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">config</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">watch</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;none&#39;</span>,         <span style="color:#75715e">// rerun | deploy | none
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">baseDir</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;work&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;node&#39;</span>,        <span style="color:#75715e">// Rhino 兼容
+</span></span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p><code>npm run build</code> → 產 <code>dist/my-project/</code>;推到手機:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb push dist/my-project /storage/emulated/0/脚本/
+</span></span></code></pre></div><p>UI layout 寫在 <code>ui.layout()</code> 時 webpack 會把 <code>&lt;vertical&gt;</code> 誤當 JSX 解,改法:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">ui</span>.<span style="color:#a6e22e">layout</span>(<span style="color:#e6db74">`                  // 用模板字串包 XML
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;vertical&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;text text=&#34;hello&#34;/&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;/vertical&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>);
+</span></span></code></pre></div><h2 id="adb-常用">ADB 常用</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># macOS 把 adb 加進 PATH</span>
+</span></span><span style="display:flex;"><span>export PATH<span style="color:#f92672">=</span>$PATH:$HOME/Library/Android/sdk/platform-tools
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># logcat 過濾 AutoX.js</span>
+</span></span><span style="display:flex;"><span>adb logcat | grep org.autojs.autoxjs.v6
+</span></span><span style="display:flex;"><span>adb shell pidof org.autojs.autoxjs.v6       <span style="color:#75715e"># 拿 PID</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 檔案推送 / 拉回</span>
+</span></span><span style="display:flex;"><span>adb push file.js /storage/emulated/0/Download/
+</span></span><span style="display:flex;"><span>adb pull /storage/emulated/0/Pictures/Screenshots ./screenshots
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 指定多裝置中的一台</span>
+</span></span><span style="display:flex;"><span>adb -s emulator-5554 shell pm list packages
+</span></span></code></pre></div><h2 id="apk-打包在-autoxjs-app-內">APK 打包(在 AutoX.js App 內)</h2>
+<ol>
+<li>右上 <strong>New Project</strong> → 輸入 main entry JS。</li>
+<li>產生專案資料夾後再 import 其他 JS / assets。</li>
+<li>右鍵 <code>build apk</code>。安裝失敗時:<strong>關閉 Play Protect 掃描</strong>,或先刪除舊版簽名不同的 APK。</li>
+</ol>
+
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://jackliangtw.github.io/js/jquery.min.js"></script>
+<script src="https://jackliangtw.github.io/js/bootstrap.min.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.cookie.js"> </script>
+<script src="https://jackliangtw.github.io/js/ekko-lightbox.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://jackliangtw.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/owl.carousel.min.js"></script>
+<script src="https://jackliangtw.github.io/js/front.js"></script>
+
+
+
+</body>
+</html>

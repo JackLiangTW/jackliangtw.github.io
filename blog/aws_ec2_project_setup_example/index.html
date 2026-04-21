@@ -47,6 +47,8 @@
       
         <li><a href="https://jackliangtw.github.io/about/">About</a></li>
       
+        <li><a href="https://jackliangtw.github.io/about-en/">About (EN)</a></li>
+      
         <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
       
     </ul>
@@ -75,7 +77,7 @@
   
   
   
-  <a target="blank" href="https://leetcode.com/JackLiangTW/" data-animate-hover="pulse" class="external" title="LeetCode">
+  <a target="blank" href="https://leetcode.com/u/k8865432110/" data-animate-hover="pulse" class="external" title="LeetCode">
     <i class="fa fa-code"></i>
   </a>
   
@@ -118,17 +120,17 @@
 <h6 id="3-建立好nodejs測試專案">3. 建立好Node.js測試專案</h6>
 <hr>
 <h4 id="0-local專案目錄範例">0. Local專案目錄範例:</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls
 </span></span><span style="display:flex;"><span>Mode                 LastWriteTime         Length Name
 </span></span><span style="display:flex;"><span>----                 -------------         ------ ----
 </span></span><span style="display:flex;"><span>-a----       2022/5/11  下午 04:32        <span style="color:#ae81ff">2114799</span> backend.zip  <span style="color:#f92672">(</span>要複製到EC2的專案<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>-a----       2022/3/22  下午 03:04           <span style="color:#ae81ff">1700</span> TestDemo.pem  <span style="color:#f92672">(</span>金鑰<span style="color:#f92672">)</span>
 </span></span></code></pre></div><hr>
 <h4 id="1-ssh到ec2終端機在第0步驟">1. SSH到EC2(終端機在第0步驟):</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i <span style="color:#e6db74">&#34;TestDemo.pem&#34;</span> ec2-user@ec2-XX-XXX-XXX-XXX.ap-northeast-1.compute.amazonaws.com
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i <span style="color:#e6db74">&#34;TestDemo.pem&#34;</span> ec2-user@ec2-XX-XXX-XXX-XXX.ap-northeast-1.compute.amazonaws.com
 </span></span></code></pre></div><hr>
 <h4 id="2-ec2建立dokcer環境">2. EC2建立Dokcer環境:</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 更新環境</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 更新環境</span>
 </span></span><span style="display:flex;"><span>$ sudo yum update -y
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 下載Amazon Dokcer 安裝檔:</span>
@@ -151,13 +153,13 @@
 </span></span><span style="display:flex;"><span>sudo chmod <span style="color:#ae81ff">666</span> /var/run/docker.sock
 </span></span></code></pre></div><hr>
 <h4 id="3-ec2建立專案資料夾project">3. EC2建立專案資料夾:project:</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir project
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir project
 </span></span></code></pre></div><hr>
 <h4 id="4-local端複製zip到ec2-project中-終端機再0-local專案目錄">4. Local端複製zip到EC2 /project中 (終端機再0. Local專案目錄):</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i <span style="color:#e6db74">&#34;./TestDemo.pem&#34;</span> backend.zip ec2-user@ec2-XX-XXX-XXX-XXX.ap-northeast-1.compute.amazonaws.com:~/project
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i <span style="color:#e6db74">&#34;./TestDemo.pem&#34;</span> backend.zip ec2-user@ec2-XX-XXX-XXX-XXX.ap-northeast-1.compute.amazonaws.com:~/project
 </span></span></code></pre></div><hr>
 <h4 id="5-ec2啟動專案流程終端機ssh到ec2中">5. EC2啟動專案流程(終端機SSH到EC2中):</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 解壓縮專案</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 解壓縮專案</span>
 </span></span><span style="display:flex;"><span>$ cd project
 </span></span><span style="display:flex;"><span>$ unzip backend.zip
 </span></span><span style="display:flex;"><span>

@@ -4,63 +4,51 @@
     <title>Portfolios on Jack Liang&#39;s portfolio and blog</title>
     <link>https://jackliangtw.github.io/portfolio/</link>
     <description>Recent content in Portfolios on Jack Liang&#39;s portfolio and blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 May 2023 14:33:01 +0530</lastBuildDate><atom:link href="https://jackliangtw.github.io/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 May 2023 14:33:01 +0530</lastBuildDate>
+    <atom:link href="https://jackliangtw.github.io/portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AmyMusic</title>
       <link>https://jackliangtw.github.io/portfolio/amymusic/</link>
       <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
       <guid>https://jackliangtw.github.io/portfolio/amymusic/</guid>
-      <description>技術架構 Node.js / Express / Mongodb / Puppeteer爬蟲 / GCP App Engine / Socket.io 使用 Node.js Express框架架設網站, 部屬到GCP App Engine Puppeteer爬蟲蒐集Youtube清單到Mongodb中, 紀錄Youtube video Id, 影片title等 使用Socket.io製作聊天室功能,可以聊天以及分享歌單 Mongodb Tables: Users: 訪客登入, 可以記錄該人所創立的歌單 ShareLists: 播放清單, MessageLists: 聊天紀錄/歌單分享, DefaultCategory: 預設清單分類(搜尋欄下方一排按鈕:華語男歌手,&amp;hellip;.) UserFavoriteList: 使用者最愛清單 前端架構說明: JS / JQuery / Cookie / Socket.io / Youtube Embed API 右邊部分為住播放區, 左邊為聊天室,可以傳輸訊息和分享自己的歌單 已分享歌單清單, 都為玩家分享的歌單 支援搜尋功能, Node.js後端直接打request去Youtube網頁搜尋並解析Video Id/ Title 右邊加入自訂歌單撥放器 手機板演示 </description>
+      <description>&lt;h4 id=&#34;技術架構&#34;&gt;技術架構&lt;/h4&gt;&#xA;&lt;h6 id=&#34;nodejs--express--mongodb--puppeteer爬蟲--gcp-app-engine--socketio&#34;&gt;Node.js / Express / Mongodb / Puppeteer爬蟲 / GCP App Engine / Socket.io&lt;/h6&gt;&#xA;&lt;h6 id=&#34;使用-nodejs-express框架架設網站-部屬到gcp-app-engine&#34;&gt;使用 Node.js Express框架架設網站, 部屬到GCP App Engine&lt;/h6&gt;&#xA;&lt;h6 id=&#34;puppeteer爬蟲蒐集youtube清單到mongodb中-紀錄youtube-video-id-影片title等&#34;&gt;Puppeteer爬蟲蒐集Youtube清單到Mongodb中, 紀錄Youtube video Id, 影片title等&lt;/h6&gt;&#xA;&lt;h6 id=&#34;使用socketio製作聊天室功能可以聊天以及分享歌單&#34;&gt;使用Socket.io製作聊天室功能,可以聊天以及分享歌單&lt;/h6&gt;&#xA;&lt;h6 id=&#34;mongodb-tables&#34;&gt;Mongodb Tables:&lt;/h6&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Users: 訪客登入, 可以記錄該人所創立的歌單&lt;/li&gt;&#xA;&lt;li&gt;ShareLists: 播放清單,&lt;/li&gt;&#xA;&lt;li&gt;MessageLists: 聊天紀錄/歌單分享,&lt;/li&gt;&#xA;&lt;li&gt;DefaultCategory: 預設清單分類(搜尋欄下方一排按鈕:華語男歌手,&amp;hellip;.)&lt;/li&gt;&#xA;&lt;li&gt;UserFavoriteList: 使用者最愛清單&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h6 id=&#34;前端架構說明&#34;&gt;前端架構說明:&lt;/h6&gt;&#xA;&lt;h6 id=&#34;js--jquery--cookie--socketio--youtube-embed-api&#34;&gt;JS / JQuery / Cookie / Socket.io / Youtube Embed API&lt;/h6&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;右邊部分為住播放區-左邊為聊天室可以傳輸訊息和分享自己的歌單&#34;&gt;右邊部分為住播放區, 左邊為聊天室,可以傳輸訊息和分享自己的歌單&lt;/h4&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://jackliangtw.github.io/img/portfolio/amymusic_1.jpg&#34; alt=&#34;結果示意&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;已分享歌單清單-都為玩家分享的歌單&#34;&gt;已分享歌單清單, 都為玩家分享的歌單&lt;/h4&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://jackliangtw.github.io/img/portfolio/amymusic_2.jpg&#34; alt=&#34;結果示意&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;支援搜尋功能-nodejs後端直接打request去youtube網頁搜尋並解析video-id-title&#34;&gt;支援搜尋功能, Node.js後端直接打request去Youtube網頁搜尋並解析Video Id/ Title&lt;/h4&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://jackliangtw.github.io/img/portfolio/amymusic_3.jpg&#34; alt=&#34;結果示意&#34;&gt;&#xA;&lt;img src=&#34;https://jackliangtw.github.io/img/portfolio/amymusic_4.jpg&#34; alt=&#34;結果示意&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;右邊加入自訂歌單撥放器&#34;&gt;右邊加入自訂歌單撥放器&lt;/h4&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://jackliangtw.github.io/img/portfolio/amymusic_5.jpg&#34; alt=&#34;結果示意&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;手機板演示&#34;&gt;手機板演示&lt;/h4&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://jackliangtw.github.io/img/portfolio/amymusic_6.jpg&#34; alt=&#34;結果示意&#34;&gt;&lt;br&gt;&#xA;&lt;img src=&#34;https://jackliangtw.github.io/img/portfolio/amymusic_7.jpg&#34; alt=&#34;結果示意&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;</description>
     </item>
-    
     <item>
       <title>Android遊戲-藏詩三百種(大學畢製)</title>
       <link>https://jackliangtw.github.io/portfolio/work12/</link>
       <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
       <guid>https://jackliangtw.github.io/portfolio/work12/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>JS遊戲-小精靈</title>
       <link>https://jackliangtw.github.io/portfolio/work11/</link>
       <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
       <guid>https://jackliangtw.github.io/portfolio/work11/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>JS遊戲-轉珠模擬器</title>
       <link>https://jackliangtw.github.io/portfolio/work10/</link>
       <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
       <guid>https://jackliangtw.github.io/portfolio/work10/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>JS遊戲-黑白棋</title>
       <link>https://jackliangtw.github.io/portfolio/work9/</link>
       <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
       <guid>https://jackliangtw.github.io/portfolio/work9/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>社區物業系統</title>
       <link>https://jackliangtw.github.io/portfolio/ezcon/</link>
       <pubDate>Thu, 25 May 2023 14:33:01 +0530</pubDate>
-      
       <guid>https://jackliangtw.github.io/portfolio/ezcon/</guid>
-      <description>Ezcon教學文件展示
-主要技術架構: 前後端分離, 前端用React.js開發, 後端用 Node.js中的feathers.js 框架開發 資料庫使用Mongodb, 因為是很草創專案, 使用NoSQL資料庫 使用Docker-compose部屬到公司購買實體主機 其他技術: Agenda.js : Server端排成通知用, 訪客時間即將到期, 公告事項發布,&amp;hellip; Firebase : 用戶App通知, 包裹帶領, 訪客到期, 訪客來訪,&amp;hellip; Swagger.js : API文件說明及範例 </description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://jackliangtw.github.io/document/ezconIntro.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ezcon教學文件展示&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;主要技術架構&#34;&gt;主要技術架構:&lt;/h4&gt;&#xA;&lt;h6 id=&#34;前後端分離-前端用reactjs開發-後端用-nodejs中的feathersjs-框架開發&#34;&gt;前後端分離, 前端用React.js開發, 後端用 Node.js中的feathers.js 框架開發&lt;/h6&gt;&#xA;&lt;h6 id=&#34;資料庫使用mongodb-因為是很草創專案-使用nosql資料庫&#34;&gt;資料庫使用Mongodb, 因為是很草創專案, 使用NoSQL資料庫&lt;/h6&gt;&#xA;&lt;h6 id=&#34;使用docker-compose部屬到公司購買實體主機&#34;&gt;使用Docker-compose部屬到公司購買實體主機&lt;/h6&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;其他技術&#34;&gt;其他技術:&lt;/h4&gt;&#xA;&lt;h6 id=&#34;agendajs--server端排成通知用-訪客時間即將到期-公告事項發布&#34;&gt;Agenda.js : Server端排成通知用, 訪客時間即將到期, 公告事項發布,&amp;hellip;&lt;/h6&gt;&#xA;&lt;h6 id=&#34;firebase--用戶app通知-包裹帶領-訪客到期-訪客來訪&#34;&gt;Firebase : 用戶App通知, 包裹帶領, 訪客到期, 訪客來訪,&amp;hellip;&lt;/h6&gt;&#xA;&lt;h6 id=&#34;swaggerjs--api文件說明及範例&#34;&gt;Swagger.js : API文件說明及範例&lt;/h6&gt;</description>
     </item>
-    
   </channel>
 </rss>

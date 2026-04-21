@@ -2,6 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jackliangtw.github.io/blog/nodejs_cluster_wrk/</loc>
+    <lastmod>2026-04-21T12:15:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/telegram_bot_setup/</loc>
+    <lastmod>2026-04-21T12:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/redis_bull_jobid/</loc>
+    <lastmod>2026-04-21T11:55:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/recaptcha_enterprise_flow/</loc>
+    <lastmod>2026-04-21T11:50:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/rabbitmq_management_ui/</loc>
+    <lastmod>2026-04-21T11:45:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/nestjs_module_cache/</loc>
+    <lastmod>2026-04-21T11:35:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/mysql_dump_migration/</loc>
+    <lastmod>2026-04-21T11:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/mongodb_query_dump/</loc>
+    <lastmod>2026-04-21T11:25:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/lotterybot_architecture_pattern/</loc>
+    <lastmod>2026-04-21T11:20:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/lightning_network_polar/</loc>
+    <lastmod>2026-04-21T11:15:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/kibana_kql_tips/</loc>
+    <lastmod>2026-04-21T11:10:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/graphql_codegen_note/</loc>
+    <lastmod>2026-04-21T11:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/git_tips/</loc>
+    <lastmod>2026-04-21T10:50:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/docker_compose_note/</loc>
+    <lastmod>2026-04-21T10:40:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/deployment_script_examples/</loc>
+    <lastmod>2026-04-21T10:35:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/clickhouse_intro/</loc>
+    <lastmod>2026-04-21T10:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/claudecode_cli_setup/</loc>
+    <lastmod>2026-04-21T10:25:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/autoxjs_note/</loc>
+    <lastmod>2026-04-21T10:20:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/angular_webpack_cache/</loc>
+    <lastmod>2026-04-21T10:15:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/android_reverse_frida/</loc>
+    <lastmod>2026-04-21T10:10:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/adminjs_action_note/</loc>
+    <lastmod>2026-04-21T10:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/typescript_extends_vs_implement/</loc>
+    <lastmod>2023-08-20T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/typescript_type-annotation/</loc>
+    <lastmod>2023-08-20T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/algorithm_permutations_1/</loc>
+    <lastmod>2023-06-01T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/algorithm_arithmetic/</loc>
+    <lastmod>2023-06-01T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/aws_boto3_apigateway/</loc>
+    <lastmod>2023-05-31T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/aws_boto3_dynamodb/</loc>
+    <lastmod>2023-05-31T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/aws_boto3_lambda/</loc>
+    <lastmod>2023-05-31T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/hugolayoutaddtagexample/</loc>
+    <lastmod>2023-05-29T23:25:22+05:30</lastmod>
+  </url><url>
     <loc>https://jackliangtw.github.io/portfolio/amymusic/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
@@ -44,38 +131,116 @@
     <loc>https://jackliangtw.github.io/blog/hugowebwithgithub/</loc>
     <lastmod>2023-05-17T19:41:01+05:30</lastmod>
   </url><url>
+    <loc>https://jackliangtw.github.io/blog/aws_ec2_project_setup_example/</loc>
+    <lastmod>2023-05-05T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/serverlessnote/</loc>
+    <lastmod>2023-05-05T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/nodejsdynamodbupdateitem/</loc>
+    <lastmod>2023-05-05T22:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/blog/pythonsetawsconfig/</loc>
+    <lastmod>2023-05-05T22:25:22+05:30</lastmod>
+  </url><url>
     <loc>https://jackliangtw.github.io/portfoliobackup/work1/</loc>
     <lastmod>2016-11-05T19:41:01+05:30</lastmod>
   </url><url>
     <loc>https://jackliangtw.github.io/blog/hugochangelinktotargetblank/</loc>
     <lastmod>2016-11-05T18:25:22+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/blog/aws_ec2_project_setup_example/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/blog/serverlessnote/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/blog/hugolayoutaddtagexample/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/blog/nodejsdynamodbupdateitem/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/blog/aws_boto3_apigateway/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/blog/aws_boto3_dynamodb/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/blog/aws_boto3_lambda/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/blog/pythonsetawsconfig/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/blog/typescript_extends_vs_implement/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/blog/typescript_type-annotation/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/blog/algorithm_permutations_1/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/blog/algorithm_arithmetic/</loc>
+    <loc>https://jackliangtw.github.io/blog/</loc>
+    <lastmod>2026-04-21T12:15:00+05:30</lastmod>
   </url><url>
     <loc>https://jackliangtw.github.io/</loc>
-    <lastmod>2023-05-25T14:33:01+05:30</lastmod>
+    <lastmod>2026-04-21T12:15:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/nodejspm2cluster%E5%A3%93%E6%B8%AC/</loc>
+    <lastmod>2026-04-21T12:15:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/</loc>
+    <lastmod>2026-04-21T12:15:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/about-en/</loc>
+    <lastmod>2026-04-21T12:10:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/telegrambot/</loc>
+    <lastmod>2026-04-21T12:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/redisbullqueuenodejs/</loc>
+    <lastmod>2026-04-21T11:55:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/recaptchasecurityweb/</loc>
+    <lastmod>2026-04-21T11:50:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/rabbitmqqueuedocker/</loc>
+    <lastmod>2026-04-21T11:45:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/nestjsnodejsredis/</loc>
+    <lastmod>2026-04-21T11:35:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/mysql%E8%B3%87%E6%96%99%E5%BA%AB/</loc>
+    <lastmod>2026-04-21T11:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/mongodb%E8%B3%87%E6%96%99%E5%BA%AB/</loc>
+    <lastmod>2026-04-21T11:25:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/%E6%9E%B6%E6%A7%8Bnestjsredis/</loc>
+    <lastmod>2026-04-21T11:20:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/%E5%8D%80%E5%A1%8A%E9%8F%88lightninglnd/</loc>
+    <lastmod>2026-04-21T11:15:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/kibanalogdevops/</loc>
+    <lastmod>2026-04-21T11:10:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/graphqlweb/</loc>
+    <lastmod>2026-04-21T11:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/git/</loc>
+    <lastmod>2026-04-21T10:50:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/dockerdevops/</loc>
+    <lastmod>2026-04-21T10:40:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/devops%E9%83%A8%E7%BD%B2dockernodejs/</loc>
+    <lastmod>2026-04-21T10:35:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/clickhouse%E8%B3%87%E6%96%99%E5%BA%ABdocker/</loc>
+    <lastmod>2026-04-21T10:30:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/claudecodecliai/</loc>
+    <lastmod>2026-04-21T10:25:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/autoxjsandroidjs/</loc>
+    <lastmod>2026-04-21T10:20:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/angularweb/</loc>
+    <lastmod>2026-04-21T10:15:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/android%E9%80%86%E5%90%91fridamagisk/</loc>
+    <lastmod>2026-04-21T10:10:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/adminjsnestjsadmin/</loc>
+    <lastmod>2026-04-21T10:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/typescript/</loc>
+    <lastmod>2023-08-20T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/%E6%BC%94%E7%AE%97%E6%B3%95js/</loc>
+    <lastmod>2023-06-01T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/awspythonboto3apigateway/</loc>
+    <lastmod>2023-05-31T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/awspythonboto3dynamodb/</loc>
+    <lastmod>2023-05-31T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/awspythonboto3lambda/</loc>
+    <lastmod>2023-05-31T23:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/hugoweb/</loc>
+    <lastmod>2023-05-29T23:25:22+05:30</lastmod>
   </url><url>
     <loc>https://jackliangtw.github.io/portfoliobackup/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
@@ -83,38 +248,24 @@
     <loc>https://jackliangtw.github.io/portfolio/</loc>
     <lastmod>2023-05-25T14:33:01+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/blog/</loc>
-    <lastmod>2023-05-17T19:41:01+05:30</lastmod>
+    <loc>https://jackliangtw.github.io/tags/awsec2nodejsdocker/</loc>
+    <lastmod>2023-05-05T23:25:22+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/tags/hugoweb/</loc>
-    <lastmod>2023-05-17T19:41:01+05:30</lastmod>
+    <loc>https://jackliangtw.github.io/tags/awsnodejslambda/</loc>
+    <lastmod>2023-05-05T23:25:22+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/tags/</loc>
-    <lastmod>2023-05-17T19:41:01+05:30</lastmod>
+    <loc>https://jackliangtw.github.io/tags/awsnodejsdynamodb/</loc>
+    <lastmod>2023-05-05T22:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/tags/awspython/</loc>
+    <lastmod>2023-05-05T22:25:22+05:30</lastmod>
+  </url><url>
+    <loc>https://jackliangtw.github.io/about/</loc>
+    <lastmod>2023-05-02T21:05:33+05:30</lastmod>
   </url><url>
     <loc>https://jackliangtw.github.io/tags/hugo/</loc>
     <lastmod>2016-11-05T18:25:22+05:30</lastmod>
   </url><url>
-    <loc>https://jackliangtw.github.io/tags/awsec2nodejsdocker/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/tags/awsnodejsdynamodb/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/tags/awsnodejslambda/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/tags/awspython/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/tags/awspythonboto3apigateway/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/tags/awspythonboto3dynamodb/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/tags/awspythonboto3lambda/</loc>
-  </url><url>
     <loc>https://jackliangtw.github.io/categories/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/tags/typescript/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/tags/%E6%BC%94%E7%AE%97%E6%B3%95js/</loc>
-  </url><url>
-    <loc>https://jackliangtw.github.io/about/</loc>
   </url>
 </urlset>

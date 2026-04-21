@@ -47,6 +47,8 @@
       
         <li><a href="https://jackliangtw.github.io/about/">About</a></li>
       
+        <li><a href="https://jackliangtw.github.io/about-en/">About (EN)</a></li>
+      
         <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
       
     </ul>
@@ -75,7 +77,7 @@
   
   
   
-  <a target="blank" href="https://leetcode.com/JackLiangTW/" data-animate-hover="pulse" class="external" title="LeetCode">
+  <a target="blank" href="https://leetcode.com/u/k8865432110/" data-animate-hover="pulse" class="external" title="LeetCode">
     <i class="fa fa-code"></i>
   </a>
   
@@ -113,7 +115,7 @@
       <div class="content-column-content">
          <h1>Python Boto3 Lambda複製</h1>
          <h4 id="0-config相關引入">0. Config相關引入:</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> urllib3 <span style="color:#75715e">#- [複製Lambda到Local需要]</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os      <span style="color:#75715e">#- [複製Lambda到Local需要]</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io      <span style="color:#75715e">#- [複製Lambda到Local需要]</span>
@@ -124,7 +126,7 @@
 </span></span></code></pre></div><hr>
 <h4 id="列出region全部lambda-functions">列出Region全部Lambda functions:</h4>
 <p><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/lambda/client/list_functions.html" target="_blank" rel="noopener">Boto3 Lambda Docs</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ListAllFunctions</span>(useSource <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ListAllFunctions</span>(useSource <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
 </span></span><span style="display:flex;"><span>        ll <span style="color:#f92672">=</span> [] <span style="color:#75715e">#- retrun list bucket</span>
 </span></span><span style="display:flex;"><span>        nextMarker <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
@@ -150,7 +152,7 @@
 <strong>CustomeCloneLambdas 可以帶想要複製的lambda function names</strong><br>
 <strong>如果CustomeCloneLambdas沒帶, 將會自動scan region 全部lambda functions作複製</strong></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">CloneLambdaLocal</span>(CustomeCloneLambdas <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">CloneLambdaLocal</span>(CustomeCloneLambdas <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> CustomeCloneLambdas:
 </span></span><span style="display:flex;"><span>        CustomeCloneLambdas <span style="color:#f92672">=</span> ListAllFunctions()
 </span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Lambda複製總數:</span><span style="color:#e6db74">{</span>len(CustomeCloneLambdas)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
@@ -193,7 +195,7 @@
 <strong>CustomeCloneLambdas 可以帶想要刪除的lambda function names</strong><br>
 <strong>如果CustomeCloneLambdas沒帶, 將會自動scan region 全部lambda functions作刪除</strong></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">DeleteLambdas</span>(CustomeCloneLambdas <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">DeleteLambdas</span>(CustomeCloneLambdas <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> CustomeCloneLambdas:
 </span></span><span style="display:flex;"><span>        CustomeCloneLambdas <span style="color:#f92672">=</span> ListAllFunctions(<span style="color:#66d9ef">False</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> _functionName <span style="color:#f92672">in</span> CustomeCloneLambdas:

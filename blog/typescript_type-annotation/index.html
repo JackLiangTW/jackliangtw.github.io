@@ -47,6 +47,8 @@
       
         <li><a href="https://jackliangtw.github.io/about/">About</a></li>
       
+        <li><a href="https://jackliangtw.github.io/about-en/">About (EN)</a></li>
+      
         <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
       
     </ul>
@@ -75,7 +77,7 @@
   
   
   
-  <a target="blank" href="https://leetcode.com/JackLiangTW/" data-animate-hover="pulse" class="external" title="LeetCode">
+  <a target="blank" href="https://leetcode.com/u/k8865432110/" data-animate-hover="pulse" class="external" title="LeetCode">
     <i class="fa fa-code"></i>
   </a>
   
@@ -115,7 +117,7 @@
          <h4 id="type">type:</h4>
 <h6 id="型別結構">型別(結構)</h6>
 <p><code>主要用來定義靜態格式, 會使用交叉型別（Intersection）和聯合型別（Union）來擴充</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">=</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">age</span>: <span style="color:#66d9ef">number</span>;
 </span></span><span style="display:flex;"><span>};
@@ -127,14 +129,14 @@
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// StudentPerson要符合(Person, Student)兩型別所有屬性
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">StudentPerson</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">Student</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">StudentPerson</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">Student</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// 至少要完全符合(Person, Student)其中一種型別, 其他部分符合也可接受
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">StudentPerson2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">Student</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">StudentPerson2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">Student</span>;
 </span></span></code></pre></div><h4 id="interface">interface:</h4>
 <h6 id="介面類別結構">介面(類別結構)</h6>
 <p><code>主要用來定義物件結構</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TestType</span> <span style="color:#f92672">=</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TestType</span> <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">info</span>: <span style="color:#66d9ef">string</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
@@ -144,12 +146,12 @@
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//- 使用extends擴充介面
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Student</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Person</span> {
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Student</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Person</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">grade</span>: <span style="color:#66d9ef">string</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//- interface也可以擴充type
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Student2</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">TestType</span> {
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Student2</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">TestType</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">grade</span>: <span style="color:#66d9ef">string</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
@@ -166,9 +168,9 @@
 </span></span></code></pre></div><h4 id="class">class:</h4>
 <h6 id="類-類介面">類, 類介面</h6>
 <p><code>class可以當作 類, 或是介面使用</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//- class當作 介面 (class前面可加上declare)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span>{
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>:<span style="color:#66d9ef">string</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">age</span>:<span style="color:#66d9ef">number</span>;
 </span></span><span style="display:flex;"><span>}
@@ -179,7 +181,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//- 類
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ClassroomSys</span>{
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ClassroomSys</span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_students</span>:<span style="color:#66d9ef">string</span>[] <span style="color:#f92672">=</span> [];
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">teacher</span>:<span style="color:#66d9ef">string</span>){}
 </span></span><span style="display:flex;"><span>
@@ -192,7 +194,7 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myClassRoom</span>:<span style="color:#66d9ef">ClassroomSys</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ClassroomSys</span>(<span style="color:#e6db74">&#34;Teacher Shu&#34;</span>); <span style="color:#75715e">//- 建構class
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">myClassRoom</span>.<span style="color:#a6e22e">insert</span>(<span style="color:#e6db74">&#34;Jack&#34;</span>);
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">myClassRoom</span>.<span style="color:#a6e22e">insert</span>(<span style="color:#e6db74">&#34;Jack&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">myClassRoom</span>.<span style="color:#a6e22e">insert</span>(<span style="color:#e6db74">&#34;Paul&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">myClassRoom</span>.<span style="color:#a6e22e">showClassroom</span>(); <span style="color:#75715e">//- 老師: Teacher Shu 學生: [ &#39;Jack&#39;, &#39;Paul&#39; ]
 </span></span></span></code></pre></div><hr>

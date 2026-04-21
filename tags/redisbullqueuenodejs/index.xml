@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redis,Bull,Queue,Nodejs on Jack Liang&#39;s portfolio and blog</title>
+    <link>https://jackliangtw.github.io/tags/redisbullqueuenodejs/</link>
+    <description>Recent content in Redis,Bull,Queue,Nodejs on Jack Liang&#39;s portfolio and blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Apr 2026 11:55:00 +0530</lastBuildDate>
+    <atom:link href="https://jackliangtw.github.io/tags/redisbullqueuenodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis &#43; Bull Queue:jobId 去重機制與事件觸發規則</title>
+      <link>https://jackliangtw.github.io/blog/redis_bull_jobid/</link>
+      <pubDate>Tue, 21 Apr 2026 11:55:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/blog/redis_bull_jobid/</guid>
+      <description>&lt;h2 id=&#34;jobid-去重機制&#34;&gt;jobId 去重機制&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;queue&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;QueueName&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;, { &lt;span style=&#34;color:#a6e22e&#34;&gt;jobId&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;data.meterId&lt;/span&gt; });&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;同一個 &lt;code&gt;jobId&lt;/code&gt; 同時間只會存在一個 active job。&lt;/li&gt;&#xA;&lt;li&gt;若 job &lt;strong&gt;還在執行中&lt;/strong&gt;(active / delayed / waiting / failed-未處理),再次 add 同 jobId &lt;strong&gt;不會建立新 job&lt;/strong&gt;——Bull 把 key 當作 Redis lock。&lt;/li&gt;&#xA;&lt;li&gt;等 &lt;code&gt;@OnQueueCompleted&lt;/code&gt; 或 &lt;code&gt;@OnQueueFailed&lt;/code&gt; 觸發、job 從 Redis 被清掉後,下一次 &lt;code&gt;add&lt;/code&gt; 才會成功。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;事件觸發規則&#34;&gt;事件觸發規則&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Processor 狀況&lt;/th&gt;&#xA;          &lt;th&gt;觸發事件&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;@Process&lt;/code&gt; 內 &lt;code&gt;throw&lt;/code&gt; / reject&lt;/td&gt;&#xA;          &lt;td&gt;&lt;code&gt;@OnQueueFailed&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;@Process&lt;/code&gt; 正常 return(含 return undefined)&lt;/td&gt;&#xA;          &lt;td&gt;&lt;code&gt;@OnQueueCompleted&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;所以想自己把 job 標記為失敗就 &lt;code&gt;throw&lt;/code&gt;,想標記完成就正常 return——不要兩個都做。&lt;/p&gt;&#xA;&lt;h2 id=&#34;用-redis-cli-查-bull-queue-狀態&#34;&gt;用 redis-cli 查 Bull queue 狀態&lt;/h2&gt;&#xA;&lt;p&gt;Bull 預設用 Redis DB 1(不是 DB 0 的一般應用資料):&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -4,16 +4,16 @@
     <title>AWS,Python on Jack Liang&#39;s portfolio and blog</title>
     <link>https://jackliangtw.github.io/tags/awspython/</link>
     <description>Recent content in AWS,Python on Jack Liang&#39;s portfolio and blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://jackliangtw.github.io/tags/awspython/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 May 2023 22:25:22 +0530</lastBuildDate>
+    <atom:link href="https://jackliangtw.github.io/tags/awspython/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python設定AWS金鑰</title>
       <link>https://jackliangtw.github.io/blog/pythonsetawsconfig/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+      <pubDate>Fri, 05 May 2023 22:25:22 +0530</pubDate>
       <guid>https://jackliangtw.github.io/blog/pythonsetawsconfig/</guid>
-      <description>cmd指令開啟config參數位置 nano ~/.aws/config 設定參數如以下 region = ap-northeast-1 output = json aws_access_key_id = MY_AWS_ACCESS_ID aws_secret_access_key = MY_AWS_SECRET_KEY </description>
+      <description>&lt;h4 id=&#34;cmd指令開啟config參數位置&#34;&gt;cmd指令開啟config參數位置&lt;/h4&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nano ~/.aws/config&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h4 id=&#34;設定參數如以下&#34;&gt;設定參數如以下&lt;/h4&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;region &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ap-northeast-1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; json&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;aws_access_key_id &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; MY_AWS_ACCESS_ID&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;aws_secret_access_key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; MY_AWS_SECRET_KEY&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>

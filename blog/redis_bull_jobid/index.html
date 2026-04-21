@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Jack Liang&#39;s portfolio and blog</title>
+<meta name="description" content="Jack Liang&#39;s portfolio and blog">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.theme.css">
+
+
+  <link href="https://jackliangtw.github.io/css/style.pink.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://jackliangtw.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://jackliangtw.github.io/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+    
+      <p class="sidebar-p">I am a soft engineer with more than 5 years of experience.</p>
+    
+      <p class="sidebar-p">Lived in Taiwan.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://jackliangtw.github.io/portfolio/">Portfolio</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about/">About</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about-en/">About (EN)</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a target="blank" href="mailto:k8865432110@gmail.com" data-animate-hover="pulse" class="email" title="E-mail">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://github.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitHub" rel="me">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://gitlab.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitLab" rel="me">
+    <i class="fa fa-gitlab"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://leetcode.com/u/k8865432110/" data-animate-hover="pulse" class="external" title="LeetCode">
+    <i class="fa fa-code"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://codepen.io/jackliangtw/pens/showcase" data-animate-hover="pulse" class="external" title="CodePen">
+    <i class="fa fa-codepen"></i>
+  </a>
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2023 Jack Liang |
+        
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>Redis &#43; Bull Queue:jobId 去重機制與事件觸發規則</h1>
+         <h2 id="jobid-去重機制">jobId 去重機制</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">queue</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">QueueName</span>, <span style="color:#a6e22e">data</span>, { <span style="color:#a6e22e">jobId</span>: <span style="color:#66d9ef">data.meterId</span> });
+</span></span></code></pre></div><ul>
+<li>同一個 <code>jobId</code> 同時間只會存在一個 active job。</li>
+<li>若 job <strong>還在執行中</strong>(active / delayed / waiting / failed-未處理),再次 add 同 jobId <strong>不會建立新 job</strong>——Bull 把 key 當作 Redis lock。</li>
+<li>等 <code>@OnQueueCompleted</code> 或 <code>@OnQueueFailed</code> 觸發、job 從 Redis 被清掉後,下一次 <code>add</code> 才會成功。</li>
+</ul>
+<h2 id="事件觸發規則">事件觸發規則</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Processor 狀況</th>
+          <th>觸發事件</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>@Process</code> 內 <code>throw</code> / reject</td>
+          <td><code>@OnQueueFailed</code></td>
+      </tr>
+      <tr>
+          <td><code>@Process</code> 正常 return(含 return undefined)</td>
+          <td><code>@OnQueueCompleted</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>所以想自己把 job 標記為失敗就 <code>throw</code>,想標記完成就正常 return——不要兩個都做。</p>
+<h2 id="用-redis-cli-查-bull-queue-狀態">用 redis-cli 查 Bull queue 狀態</h2>
+<p>Bull 預設用 Redis DB 1(不是 DB 0 的一般應用資料):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 進入 redis container</span>
+</span></span><span style="display:flex;"><span>docker exec -it &lt;redis-container&gt; redis-cli
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>127.0.0.1:6379&gt; SELECT <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>127.0.0.1:6379<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>&gt; KEYS <span style="color:#e6db74">&#34;bull:*&#34;</span>              <span style="color:#75715e"># 列出所有 queue 相關 key</span>
+</span></span><span style="display:flex;"><span>127.0.0.1:6379<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>&gt; KEYS <span style="color:#e6db74">&#34;bull:BetQueue:*&#34;</span>     <span style="color:#75715e"># 只看 BetQueue</span>
+</span></span><span style="display:flex;"><span>127.0.0.1:6379<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>&gt; HGETALL bull:BetQueue:425  <span style="color:#75715e"># 看 jobId=425 的內容</span>
+</span></span></code></pre></div><p>常見 key 結構:</p>
+<ul>
+<li><code>bull:&lt;QueueName&gt;:id</code> — 自增 id</li>
+<li><code>bull:&lt;QueueName&gt;:&lt;jobId&gt;</code> — hash,儲存 <code>data</code>, <code>opts</code>, <code>progress</code>, <code>returnvalue</code>, <code>failedReason</code>…</li>
+<li><code>bull:&lt;QueueName&gt;:waiting</code> / <code>:active</code> / <code>:delayed</code> / <code>:failed</code> — 各狀態的 list/zset</li>
+</ul>
+<h2 id="踩坑提醒">踩坑提醒</h2>
+<ul>
+<li>生產環境想防重複觸發(如帳單、通知),務必傳入 <code>jobId</code>,不要靠 <code>removeOnComplete</code> 自己防。</li>
+<li><code>@OnQueueFailed</code> handler 要能處理<strong>無限 retry</strong>情境;Bull 預設會 retry 直到 <code>attempts</code> 用完。</li>
+<li>Scheduler 起的 repeat job 刪除要用 <code>queue.removeRepeatable(name, opts)</code>,<code>removeJob</code> 只會移除當下這次。</li>
+</ul>
+
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://jackliangtw.github.io/js/jquery.min.js"></script>
+<script src="https://jackliangtw.github.io/js/bootstrap.min.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.cookie.js"> </script>
+<script src="https://jackliangtw.github.io/js/ekko-lightbox.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://jackliangtw.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/owl.carousel.min.js"></script>
+<script src="https://jackliangtw.github.io/js/front.js"></script>
+
+
+
+</body>
+</html>

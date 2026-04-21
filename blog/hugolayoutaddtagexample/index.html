@@ -47,6 +47,8 @@
       
         <li><a href="https://jackliangtw.github.io/about/">About</a></li>
       
+        <li><a href="https://jackliangtw.github.io/about-en/">About (EN)</a></li>
+      
         <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
       
     </ul>
@@ -75,7 +77,7 @@
   
   
   
-  <a target="blank" href="https://leetcode.com/JackLiangTW/" data-animate-hover="pulse" class="external" title="LeetCode">
+  <a target="blank" href="https://leetcode.com/u/k8865432110/" data-animate-hover="pulse" class="external" title="LeetCode">
     <i class="fa fa-code"></i>
   </a>
   
@@ -121,7 +123,7 @@
 <blockquote>
 <p><strong>{{ $變數 := &ldquo;某值&rdquo; }}</strong></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 宣告$myVar變數 = .Params.tags.split(&#39;,&#39;) --&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 宣告$myVar變數 = .Params.tags.split(&#39;,&#39;) --&gt;</span>
 </span></span><span style="display:flex;"><span>{{ $myVar := split .Params.tags &#34;,&#34; }}
 </span></span></code></pre></div><hr>
 <h5 id="2-range陣列資料陣列資料案染">2. Range陣列資料陣列資料案染:</h5>
@@ -129,7 +131,7 @@
 <blockquote>
 <p><strong>後面需要{{end}}作結尾包覆</strong></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 取得index, element寫法 --&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 取得index, element寫法 --&gt;</span>
 </span></span><span style="display:flex;"><span>{{ range $index, $element := $myVar }}
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;這是Index{{$index}}&lt;/<span style="color:#f92672">span</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;這是Element{{$element}}&lt;/<span style="color:#f92672">span</span>&gt;
@@ -148,7 +150,7 @@
 <strong>eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分</strong><br>
 <strong>($myVar | len) == $myVar.length</strong></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 取得index, element寫法 --&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 取得index, element寫法 --&gt;</span>
 </span></span><span style="display:flex;"><span>{{ if eq ($myVar | len) 0 }}
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt;這是0&lt;/<span style="color:#f92672">span</span>&gt;   
 </span></span><span style="display:flex;"><span>{{ if eq ($myVar | len) 1 }}
@@ -164,7 +166,7 @@
 <strong>eq 相當於JS中 ==, 只是2比對值放在它之後,中間用空格區分</strong><br>
 <strong>($myVar | len) == $myVar.length</strong></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- String 2 --&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- String 2 --&gt;</span>
 </span></span><span style="display:flex;"><span>{{ &#34;ab&#34; | len }}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- String 0 --&gt;</span>
@@ -183,7 +185,7 @@
 </span></span><span style="display:flex;"><span>{{ dict | len }} → 0
 </span></span></code></pre></div><hr>
 <h4 id="完整html-demo">完整html demo:</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-xs-12 col-sm-8 col-md-9 content-column&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-xs-12 col-sm-8 col-md-9 content-column&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clearButtons&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>    {{ partial &#34;mobile_nav_toggle.html&#34; . }}
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;grid&#34;</span>&gt;
@@ -257,21 +259,21 @@
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
 </span></span></code></pre></div><hr>
 <h4 id="完整js-demo">完整JS demo:</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">selectedTag</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>; <span style="color:#75715e">//- 以選擇Tags(Array string)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">btnsFilter</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;button.chooseTag&#39;</span>); <span style="color:#75715e">//- Tag Button ele
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allPanel</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;div.masonry-item&#39;</span>); <span style="color:#75715e">//- Render Context
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">clearBtnDiv</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#39;clearButtons&#39;</span>)[<span style="color:#ae81ff">0</span>]; <span style="color:#75715e">//- clear Tag button area
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">btnsFilter</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;button.chooseTag&#39;</span>); <span style="color:#75715e">//- Tag Button ele
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allPanel</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;div.masonry-item&#39;</span>); <span style="color:#75715e">//- Render Context
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">clearBtnDiv</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#39;clearButtons&#39;</span>)[<span style="color:#ae81ff">0</span>]; <span style="color:#75715e">//- clear Tag button area
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">btnsFilter</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">button</span>) { <span style="color:#75715e">//- Filter加入Tags
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>() {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>() {
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">theTag</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#39;tag&#39;</span>);
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">selectedTag</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span>)<span style="color:#a6e22e">selectedTag</span><span style="color:#f92672">=</span>[<span style="color:#a6e22e">theTag</span>]; <span style="color:#75715e">//- isFirst element
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">theTag</span>)){ <span style="color:#75715e">//- 已加入
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span>;
+</span></span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">theTag</span>)){ <span style="color:#75715e">//- 已加入
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
 </span></span><span style="display:flex;"><span>      }
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">else</span>{ <span style="color:#75715e">//- 加入
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">theTag</span>);
+</span></span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">theTag</span>);
 </span></span><span style="display:flex;"><span>      }
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">AddClearButtonRender</span>(<span style="color:#a6e22e">theTag</span>);
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">filterRender</span>();
@@ -279,28 +281,28 @@
 </span></span><span style="display:flex;"><span>  });
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">AddClearButtonRender</span>(<span style="color:#a6e22e">tagName</span>){ <span style="color:#75715e">//- 加上display:none, display:block
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">button</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;button&#39;</span>);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">button</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;button&#39;</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tagName</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>() { <span style="color:#75715e">//- 觸發移除自己Tag
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">button</span>); <span style="color:#75715e">// remove &lt;Button&gt; ele
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">selectedTag</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span>)<span style="color:#66d9ef">return</span>;
+</span></span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">button</span>); <span style="color:#75715e">// remove &lt;Button&gt; ele
+</span></span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">selectedTag</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span>)<span style="color:#66d9ef">return</span>;
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">idx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">tagName</span>);
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">idx</span><span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>){
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">idx</span>,<span style="color:#a6e22e">idx</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">selectedTag</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)<span style="color:#a6e22e">selectedTag</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>; <span style="color:#75715e">//- if no conditions
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">filterRender</span>(); <span style="color:#75715e">//- ReRender context
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      }
+</span></span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">filterRender</span>(); <span style="color:#75715e">//- ReRender context
+</span></span></span><span style="display:flex;"><span>      }
 </span></span><span style="display:flex;"><span>    });
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;btn&#39;</span>,<span style="color:#e6db74">&#39;btn-primary&#39;</span>); <span style="color:#75715e">//- add button css
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;type&#39;</span>, <span style="color:#e6db74">&#34;button&#34;</span>);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;type&#39;</span>, <span style="color:#e6db74">&#34;button&#34;</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;tag&#39;</span>, <span style="color:#a6e22e">tagName</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">clearBtnDiv</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">button</span>);
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">filterRender</span>(){ <span style="color:#75715e">//- 加上display:none, display:block
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">choosedTag</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">selectedTag</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">selectedTag</span>;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">choosedTag</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">selectedTag</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">selectedTag</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">allPanel</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">ele</span>) {
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">eleHasTags</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#39;tagData&#39;</span>);
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">isShow</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;

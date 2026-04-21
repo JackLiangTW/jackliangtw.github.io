@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Jack Liang&#39;s portfolio and blog</title>
+<meta name="description" content="Jack Liang&#39;s portfolio and blog">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.theme.css">
+
+
+  <link href="https://jackliangtw.github.io/css/style.pink.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://jackliangtw.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://jackliangtw.github.io/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+    
+      <p class="sidebar-p">I am a soft engineer with more than 5 years of experience.</p>
+    
+      <p class="sidebar-p">Lived in Taiwan.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://jackliangtw.github.io/portfolio/">Portfolio</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about/">About</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about-en/">About (EN)</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a target="blank" href="mailto:k8865432110@gmail.com" data-animate-hover="pulse" class="email" title="E-mail">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://github.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitHub" rel="me">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://gitlab.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitLab" rel="me">
+    <i class="fa fa-gitlab"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://leetcode.com/u/k8865432110/" data-animate-hover="pulse" class="external" title="LeetCode">
+    <i class="fa fa-code"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://codepen.io/jackliangtw/pens/showcase" data-animate-hover="pulse" class="external" title="CodePen">
+    <i class="fa fa-codepen"></i>
+  </a>
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2023 Jack Liang |
+        
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>Android 逆向入門:Frida &#43; Magisk &#43; LSPosed 工具分工</h1>
+         <blockquote>
+<p><strong>重要提醒</strong></p>
+<p>本文介紹的工具與手法屬於<strong>資安 / 逆向測試</strong>領域,僅限用於:</p>
+<ul>
+<li>自己或客戶<strong>授權</strong>的 App(如 CTF、滲透測試、自家產品強化)</li>
+<li>學習用的公開教材、練習 App(例如 <code>InsecureBankv2</code>、<code>DIVA</code>、OWASP MSTG 測試 App)</li>
+</ul>
+<p>操作時請注意:</p>
+<ul>
+<li>未經授權對他人 App 進行逆向、繞過保護、封包竄改,可能觸犯當地法律(著作權法、個資保護法、妨害電腦使用罪…),請遵守當地法規</li>
+<li>執行請在隔離的測試裝置 / 模擬器,<strong>不要拿主力手機或個人銀行 App</strong></li>
+<li><strong>本文內容僅供技術交流,風險自負</strong>,作者不為讀者依此操作所致之法律、財務、裝置損失負責</li>
+</ul>
+</blockquote>
+<h2 id="工具分工">工具分工</h2>
+<table>
+  <thead>
+      <tr>
+          <th>工具</th>
+          <th>角色</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>apktool</strong></td>
+          <td>靜態拆 APK:AndroidManifest、smali、resources</td>
+      </tr>
+      <tr>
+          <td><strong>Jadx</strong></td>
+          <td>反編譯 dex → 可讀 Java;入門必備</td>
+      </tr>
+      <tr>
+          <td><strong>JEB Decompiler</strong></td>
+          <td>商用 Jadx 強化版(smali → Java 還原更好)</td>
+      </tr>
+      <tr>
+          <td><strong>Frida</strong></td>
+          <td>動態 hook:attach 到執行中的 process 改行為</td>
+      </tr>
+      <tr>
+          <td><strong>Magisk</strong></td>
+          <td>取得 root,並提供模組系統</td>
+      </tr>
+      <tr>
+          <td><strong>LSPosed</strong></td>
+          <td>Magisk 上的 Xposed 實作,Java/Kotlin hook</td>
+      </tr>
+      <tr>
+          <td><strong>Shamiko</strong></td>
+          <td>在 Magisk 上隱藏 root,逃過 SafetyNet</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="frida-常用指令">Frida 常用指令</h2>
+<p>前置:裝置要有 <strong>frida-server</strong> 在跑(root 裝置),App 要開著在前景。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 監聽所有 onClick 事件,看點擊哪個 class</span>
+</span></span><span style="display:flex;"><span>frida-trace -U -F -j <span style="color:#e6db74">&#39;*!onClick&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 監聽某 package 所有方法</span>
+</span></span><span style="display:flex;"><span>frida-trace -U -F -j <span style="color:#e6db74">&#39;com.paymaya.common.base*!*&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># attach 到執行中的特定 package(不 spawn)</span>
+</span></span><span style="display:flex;"><span>frida -U -F -l hook.js
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># spawn 並 early-attach</span>
+</span></span><span style="display:flex;"><span>frida -U -f com.target.app -l hook.js --no-pause
+</span></span></code></pre></div><p>寫個簡單 hook(<code>hook.js</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Java</span>.<span style="color:#a6e22e">perform</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MainActivity</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Java</span>.<span style="color:#a6e22e">use</span>(<span style="color:#e6db74">&#39;com.target.MainActivity&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">MainActivity</span>.<span style="color:#a6e22e">checkLicense</span>.<span style="color:#a6e22e">implementation</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;[+] bypass checkLicense&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;           <span style="color:#75715e">// 永遠回 true
+</span></span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="入門學習資源">入門學習資源</h2>
+<ul>
+<li>胡立《安卓 APK 反編譯系列》— <a href="https://blog.huli.tw/2023/04/27/android-apk-decompile-intro-1/" target="_blank" rel="noopener">https://blog.huli.tw/2023/04/27/android-apk-decompile-intro-1/</a></li>
+<li>r0ysue《Frida SO 逆向實戰》GitHub:<a href="https://github.com/r0ysue/FridaAndrioidNativeBeginnersBook" target="_blank" rel="noopener">https://github.com/r0ysue/FridaAndrioidNativeBeginnersBook</a></li>
+<li>Android 逆向工具總覽:<a href="https://github.com/WuFengXue/android-reverse" target="_blank" rel="noopener">https://github.com/WuFengXue/android-reverse</a></li>
+<li>Magisk Trust User Certs / JustTrustMe 原理:<a href="https://uint128.com/2021/11/03/" target="_blank" rel="noopener">https://uint128.com/2021/11/03/</a></li>
+<li>Frida 自動化技巧:<a href="https://blog.csdn.net/pdcfighting/article/details/125419046" target="_blank" rel="noopener">https://blog.csdn.net/pdcfighting/article/details/125419046</a></li>
+</ul>
+<h2 id="ssl-pinning-繞過-3-常見手法">SSL Pinning 繞過 3 常見手法</h2>
+<ol>
+<li><strong>apktool + network_security_config</strong>:改 <code>AndroidManifest</code> + <code>res/xml/network_security_config.xml</code> 讓 App 信任 user CA;重新簽名安裝。</li>
+<li><strong>Magisk 模組 Move Certificates</strong>:把使用者 CA 移到系統 CA,全 App 生效,不用改每個 App。</li>
+<li><strong>Frida Hook</strong>:動態把 <code>checkServerTrusted</code> / <code>verify</code> 改成 return true;<code>JustTrustMe</code> 或 <code>frida-android-unpinning</code> 腳本最常用。</li>
+</ol>
+<h2 id="magisk--lsposed--shamiko-安裝順序">Magisk / LSPosed / Shamiko 安裝順序</h2>
+<ol>
+<li>先 root 裝置(rootAVD 或官方 boot.img patch)。</li>
+<li>Magisk App → Modules → 裝 <strong>LSPosed</strong>(Zygisk 版)→ reboot。</li>
+<li>模組被 Play Protect 偵測時,裝 <strong>Shamiko</strong>:Magisk Settings 開啟 Zygisk + DenyList → 把要藏 root 的 App 加進來 → Shamiko 會自動套用。</li>
+<li>某些金融 / 遊戲 App 仍會被抓,嘗試關 Shamiko 的 whitelist(藏全域)或降版。</li>
+</ol>
+<h2 id="常見風險提醒">常見風險提醒</h2>
+<ul>
+<li>逆向自己或客戶授權的 App;他人 App 請遵守當地法律。</li>
+<li>root / 模組組合常會造成 SafetyNet / Play Integrity 失效,影響支付、銀行類 App 正常使用。</li>
+<li>Frida 的 payload 可能被 App 反 frida 檢測(<code>libfrida-agent.so</code> pattern),要改名或用 <strong>stalker / emulated</strong> mode 迴避。</li>
+</ul>
+
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://jackliangtw.github.io/js/jquery.min.js"></script>
+<script src="https://jackliangtw.github.io/js/bootstrap.min.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.cookie.js"> </script>
+<script src="https://jackliangtw.github.io/js/ekko-lightbox.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://jackliangtw.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/owl.carousel.min.js"></script>
+<script src="https://jackliangtw.github.io/js/front.js"></script>
+
+
+
+</body>
+</html>

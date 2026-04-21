@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Jack Liang&#39;s portfolio and blog</title>
+<meta name="description" content="Jack Liang&#39;s portfolio and blog">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.theme.css">
+
+
+  <link href="https://jackliangtw.github.io/css/style.pink.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://jackliangtw.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://jackliangtw.github.io/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+    
+      <p class="sidebar-p">I am a soft engineer with more than 5 years of experience.</p>
+    
+      <p class="sidebar-p">Lived in Taiwan.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://jackliangtw.github.io/portfolio/">Portfolio</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about/">About</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about-en/">About (EN)</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a target="blank" href="mailto:k8865432110@gmail.com" data-animate-hover="pulse" class="email" title="E-mail">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://github.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitHub" rel="me">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://gitlab.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitLab" rel="me">
+    <i class="fa fa-gitlab"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://leetcode.com/u/k8865432110/" data-animate-hover="pulse" class="external" title="LeetCode">
+    <i class="fa fa-code"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://codepen.io/jackliangtw/pens/showcase" data-animate-hover="pulse" class="external" title="CodePen">
+    <i class="fa fa-codepen"></i>
+  </a>
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2023 Jack Liang |
+        
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>Lightning Network 本地測試:Polar &#43; lncli 速查</h1>
+         <h2 id="polar-是什麼">Polar 是什麼</h2>
+<p>Polar(<a href="https://lightningpolar.com/" target="_blank" rel="noopener">https://lightningpolar.com/</a>)本機跑 Docker 的 LN 測試環境,一鍵起出 <code>bitcoind (regtest) + 多個 LND / Core Lightning node</code>。常用來開頻道、測發票、發送付款。</p>
+<h2 id="lncli-連線指定-nodetlsmacaroon">lncli 連線(指定 node、TLS、macaroon)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lncli -n regtest <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --rpcserver<span style="color:#f92672">=</span>127.0.0.1:10001 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --macaroonpath<span style="color:#f92672">=</span>./alice/data/chain/bitcoin/regtest/admin.macaroon <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --tlscertpath<span style="color:#f92672">=</span>./alice/tls.cert <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  getinfo
+</span></span></code></pre></div><p>參數解讀:</p>
+<ul>
+<li><code>-n regtest</code>:網路名(<code>mainnet</code> / <code>testnet</code> / <code>regtest</code>)。</li>
+<li><code>--rpcserver</code>:node gRPC port(Polar 對每個 node 開不同 port)。</li>
+<li><code>--macaroonpath</code>:權限憑證;<code>admin.macaroon</code> 最大權限,呼叫哪個 api 決定要哪個 macaroon。</li>
+<li><code>--tlscertpath</code>:gRPC TLS cert,Polar 每個 node 自己簽一張。</li>
+</ul>
+<h2 id="常用指令流程兩個-node-開-channel--付款">常用指令流程(兩個 node 開 channel → 付款)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1) 各自拿 pubkey</span>
+</span></span><span style="display:flex;"><span>ALICE<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>lncli ... getinfo | jq -r .identity_pubkey<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>BOB<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>lncli ... --rpcserver<span style="color:#f92672">=</span>127.0.0.1:10002 getinfo | jq -r .identity_pubkey<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2) Alice → Bob 建 peer</span>
+</span></span><span style="display:flex;"><span>lncli ... connect $BOB@127.0.0.1:9735
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3) 開 channel(單位 satoshis)</span>
+</span></span><span style="display:flex;"><span>lncli ... openchannel $BOB <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 回傳 funding_txid;regtest 要挖幾個區塊才會 confirm:</span>
+</span></span><span style="display:flex;"><span>bitcoin-cli -regtest generatetoaddress <span style="color:#ae81ff">6</span> <span style="color:#66d9ef">$(</span>bitcoin-cli -regtest getnewaddress<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4) Bob 產生發票</span>
+</span></span><span style="display:flex;"><span>lncli ... --rpcserver<span style="color:#f92672">=</span>127.0.0.1:10002 addinvoice --amt <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># → payment_request: lnbcrt10...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5) Alice 付款</span>
+</span></span><span style="display:flex;"><span>lncli ... sendpayment --pay_req lnbcrt10...
+</span></span></code></pre></div><h2 id="在-net--node-應用整合">在 .NET / Node 應用整合</h2>
+<ul>
+<li>把 <code>tls.cert</code>、<code>admin.macaroon</code> 複製到 app 專案目錄。</li>
+<li><code>appsettings.json</code> / <code>.env</code> 設定:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;Lnd&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Host&#34;</span>: <span style="color:#e6db74">&#34;127.0.0.1:10001&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;TlsCertPath&#34;</span>: <span style="color:#e6db74">&#34;./ln-credentials/alice/tls.cert&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;MacaroonPath&#34;</span>: <span style="color:#e6db74">&#34;./ln-credentials/alice/admin.macaroon&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>啟動 app 若沒 error log → LN client 已成功 handshake;此時背景會嘗試 subscribe invoice stream。</li>
+</ul>
+<h2 id="安全提醒">安全提醒</h2>
+<ul>
+<li><code>admin.macaroon</code> = LND 全權,<strong>等同私鑰</strong>。別上 git,<code>.gitignore</code> 要列上整個 <code>ln-credentials/</code> 目錄。</li>
+<li>Prod 連線強烈建議用 <strong>read-only macaroon</strong>(<code>invoice.macaroon</code> 只能讀發票,<code>readonly.macaroon</code> 只查詢);需要付款再用 <code>admin</code> 且另存硬體保險。</li>
+<li><code>regtest</code> 僅本地;上 <code>testnet</code> 前記得先在 faucet 拿測試幣,別拿 main 的幣來燒。</li>
+</ul>
+
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://jackliangtw.github.io/js/jquery.min.js"></script>
+<script src="https://jackliangtw.github.io/js/bootstrap.min.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.cookie.js"> </script>
+<script src="https://jackliangtw.github.io/js/ekko-lightbox.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://jackliangtw.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/owl.carousel.min.js"></script>
+<script src="https://jackliangtw.github.io/js/front.js"></script>
+
+
+
+</body>
+</html>

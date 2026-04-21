@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GraphQL,Web on Jack Liang&#39;s portfolio and blog</title>
+    <link>https://jackliangtw.github.io/tags/graphqlweb/</link>
+    <description>Recent content in GraphQL,Web on Jack Liang&#39;s portfolio and blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Apr 2026 11:00:00 +0530</lastBuildDate>
+    <atom:link href="https://jackliangtw.github.io/tags/graphqlweb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GraphQL 前後端開發流程與 Codegen 常見錯誤</title>
+      <link>https://jackliangtw.github.io/blog/graphql_codegen_note/</link>
+      <pubDate>Tue, 21 Apr 2026 11:00:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/blog/graphql_codegen_note/</guid>
+      <description>&lt;h2 id=&#34;前後端開發流程&#34;&gt;前後端開發流程&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;後端&lt;/strong&gt;:定義 resolver、type、enum module;啟動服務(例如 &lt;code&gt;http://localhost:18055/graphql&lt;/code&gt;)。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;前端&lt;/strong&gt;:寫 &lt;code&gt;.graphql&lt;/code&gt;(query / mutation / subscription 檔)。&lt;/li&gt;&#xA;&lt;li&gt;執行 &lt;code&gt;npm run codegen&lt;/code&gt; / &lt;code&gt;yarn codegen&lt;/code&gt;,依 codegen config 向後端拉 schema,產生 &lt;code&gt;graphql.ts&lt;/code&gt;(含 TS 型別、React hooks 或 Apollo 操作函式)。&lt;/li&gt;&#xA;&lt;li&gt;前端程式 import &lt;code&gt;graphql.ts&lt;/code&gt; 使用強型別呼叫。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;codegen-常見錯誤&#34;&gt;Codegen 常見錯誤&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;後端未啟動&lt;/strong&gt;:codegen 抓不到 schema → 顯示 &lt;code&gt;Failed to load schema&lt;/code&gt;。先確認對應 port 有起來。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Schema 需要 auth&lt;/strong&gt;:codegen config 要加 headers(例 &lt;code&gt;Authorization: Bearer &amp;lt;token&amp;gt;&lt;/code&gt;),否則被擋。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;兩端 enum 不一致&lt;/strong&gt;:後端 enum 名稱 / 值動過卻沒重跑 codegen,前端會拿到舊型別。codegen 放到 pre-commit / CI 避免漏跑。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;graphql-playground--apollo-sandbox&#34;&gt;GraphQL Playground / Apollo Sandbox&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;啟動後打 &lt;code&gt;http://&amp;lt;host&amp;gt;/graphql&lt;/code&gt; 多半會自動進入互動介面。&lt;/li&gt;&#xA;&lt;li&gt;左側 &lt;strong&gt;Docs / Schema&lt;/strong&gt; 欄可看所有 query、mutation、type 定義,是寫 resolver 或補 query 時的入口。&lt;/li&gt;&#xA;&lt;li&gt;支援直接在 UI 試跑 query;配合 &lt;code&gt;HTTP Headers&lt;/code&gt; 帶 auth token 測登入後才能用的 endpoint。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;graphql-playground-獨立-app&#34;&gt;GraphQL Playground 獨立 App&lt;/h2&gt;&#xA;&lt;p&gt;除了內嵌在後端 endpoint 的 web UI,GraphQL Playground 也有&lt;strong&gt;獨立桌面 App&lt;/strong&gt;(Electron 打包),即使後端關掉 &lt;code&gt;/graphql&lt;/code&gt; 路由也能用:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

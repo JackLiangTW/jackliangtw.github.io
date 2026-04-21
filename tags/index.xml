@@ -4,107 +4,233 @@
     <title>Tags on Jack Liang&#39;s portfolio and blog</title>
     <link>https://jackliangtw.github.io/tags/</link>
     <description>Recent content in Tags on Jack Liang&#39;s portfolio and blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 May 2023 19:41:01 +0530</lastBuildDate><atom:link href="https://jackliangtw.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Apr 2026 12:15:00 +0530</lastBuildDate>
+    <atom:link href="https://jackliangtw.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nodejs,PM2,Cluster,壓測</title>
+      <link>https://jackliangtw.github.io/tags/nodejspm2cluster%E5%A3%93%E6%B8%AC/</link>
+      <pubDate>Tue, 21 Apr 2026 12:15:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/nodejspm2cluster%E5%A3%93%E6%B8%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Telegram,Bot</title>
+      <link>https://jackliangtw.github.io/tags/telegrambot/</link>
+      <pubDate>Tue, 21 Apr 2026 12:00:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/telegrambot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redis,Bull,Queue,Nodejs</title>
+      <link>https://jackliangtw.github.io/tags/redisbullqueuenodejs/</link>
+      <pubDate>Tue, 21 Apr 2026 11:55:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/redisbullqueuenodejs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ReCAPTCHA,Security,Web</title>
+      <link>https://jackliangtw.github.io/tags/recaptchasecurityweb/</link>
+      <pubDate>Tue, 21 Apr 2026 11:50:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/recaptchasecurityweb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RabbitMQ,Queue,Docker</title>
+      <link>https://jackliangtw.github.io/tags/rabbitmqqueuedocker/</link>
+      <pubDate>Tue, 21 Apr 2026 11:45:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/rabbitmqqueuedocker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NestJS,Nodejs,Redis</title>
+      <link>https://jackliangtw.github.io/tags/nestjsnodejsredis/</link>
+      <pubDate>Tue, 21 Apr 2026 11:35:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/nestjsnodejsredis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MySQL,資料庫</title>
+      <link>https://jackliangtw.github.io/tags/mysql%E8%B3%87%E6%96%99%E5%BA%AB/</link>
+      <pubDate>Tue, 21 Apr 2026 11:30:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/mysql%E8%B3%87%E6%96%99%E5%BA%AB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MongoDB,資料庫</title>
+      <link>https://jackliangtw.github.io/tags/mongodb%E8%B3%87%E6%96%99%E5%BA%AB/</link>
+      <pubDate>Tue, 21 Apr 2026 11:25:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/mongodb%E8%B3%87%E6%96%99%E5%BA%AB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>架構,NestJS,Redis</title>
+      <link>https://jackliangtw.github.io/tags/%E6%9E%B6%E6%A7%8Bnestjsredis/</link>
+      <pubDate>Tue, 21 Apr 2026 11:20:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/%E6%9E%B6%E6%A7%8Bnestjsredis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>區塊鏈,Lightning,LND</title>
+      <link>https://jackliangtw.github.io/tags/%E5%8D%80%E5%A1%8A%E9%8F%88lightninglnd/</link>
+      <pubDate>Tue, 21 Apr 2026 11:15:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/%E5%8D%80%E5%A1%8A%E9%8F%88lightninglnd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kibana,Log,DevOps</title>
+      <link>https://jackliangtw.github.io/tags/kibanalogdevops/</link>
+      <pubDate>Tue, 21 Apr 2026 11:10:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/kibanalogdevops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GraphQL,Web</title>
+      <link>https://jackliangtw.github.io/tags/graphqlweb/</link>
+      <pubDate>Tue, 21 Apr 2026 11:00:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/graphqlweb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://jackliangtw.github.io/tags/git/</link>
+      <pubDate>Tue, 21 Apr 2026 10:50:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker,DevOps</title>
+      <link>https://jackliangtw.github.io/tags/dockerdevops/</link>
+      <pubDate>Tue, 21 Apr 2026 10:40:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/dockerdevops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps,部署,Docker,Nodejs</title>
+      <link>https://jackliangtw.github.io/tags/devops%E9%83%A8%E7%BD%B2dockernodejs/</link>
+      <pubDate>Tue, 21 Apr 2026 10:35:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/devops%E9%83%A8%E7%BD%B2dockernodejs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ClickHouse,資料庫,Docker</title>
+      <link>https://jackliangtw.github.io/tags/clickhouse%E8%B3%87%E6%96%99%E5%BA%ABdocker/</link>
+      <pubDate>Tue, 21 Apr 2026 10:30:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/clickhouse%E8%B3%87%E6%96%99%E5%BA%ABdocker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ClaudeCode,CLI,AI</title>
+      <link>https://jackliangtw.github.io/tags/claudecodecliai/</link>
+      <pubDate>Tue, 21 Apr 2026 10:25:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/claudecodecliai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AutoXjs,Android,JS</title>
+      <link>https://jackliangtw.github.io/tags/autoxjsandroidjs/</link>
+      <pubDate>Tue, 21 Apr 2026 10:20:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/autoxjsandroidjs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Angular,Web</title>
+      <link>https://jackliangtw.github.io/tags/angularweb/</link>
+      <pubDate>Tue, 21 Apr 2026 10:15:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/angularweb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Android,逆向,Frida,Magisk</title>
+      <link>https://jackliangtw.github.io/tags/android%E9%80%86%E5%90%91fridamagisk/</link>
+      <pubDate>Tue, 21 Apr 2026 10:10:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/android%E9%80%86%E5%90%91fridamagisk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AdminJS,NestJS,Admin</title>
+      <link>https://jackliangtw.github.io/tags/adminjsnestjsadmin/</link>
+      <pubDate>Tue, 21 Apr 2026 10:00:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/adminjsnestjsadmin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TypeScript</title>
+      <link>https://jackliangtw.github.io/tags/typescript/</link>
+      <pubDate>Sun, 20 Aug 2023 23:25:22 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>演算法,JS</title>
+      <link>https://jackliangtw.github.io/tags/%E6%BC%94%E7%AE%97%E6%B3%95js/</link>
+      <pubDate>Thu, 01 Jun 2023 23:25:22 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/%E6%BC%94%E7%AE%97%E6%B3%95js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS,Python,Boto3,ApiGateway</title>
+      <link>https://jackliangtw.github.io/tags/awspythonboto3apigateway/</link>
+      <pubDate>Wed, 31 May 2023 23:25:22 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/awspythonboto3apigateway/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS,Python,Boto3,Dynamodb</title>
+      <link>https://jackliangtw.github.io/tags/awspythonboto3dynamodb/</link>
+      <pubDate>Wed, 31 May 2023 23:25:22 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/awspythonboto3dynamodb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS,Python,Boto3,Lambda</title>
+      <link>https://jackliangtw.github.io/tags/awspythonboto3lambda/</link>
+      <pubDate>Wed, 31 May 2023 23:25:22 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/awspythonboto3lambda/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Hugo,Web</title>
       <link>https://jackliangtw.github.io/tags/hugoweb/</link>
-      <pubDate>Wed, 17 May 2023 19:41:01 +0530</pubDate>
-      
+      <pubDate>Mon, 29 May 2023 23:25:22 +0530</pubDate>
       <guid>https://jackliangtw.github.io/tags/hugoweb/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>AWS,EC2,Nodejs,Docker</title>
+      <link>https://jackliangtw.github.io/tags/awsec2nodejsdocker/</link>
+      <pubDate>Fri, 05 May 2023 23:25:22 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/awsec2nodejsdocker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS,Nodejs,Lambda</title>
+      <link>https://jackliangtw.github.io/tags/awsnodejslambda/</link>
+      <pubDate>Fri, 05 May 2023 23:25:22 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/awsnodejslambda/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS,Nodejs,Dynamodb</title>
+      <link>https://jackliangtw.github.io/tags/awsnodejsdynamodb/</link>
+      <pubDate>Fri, 05 May 2023 22:25:22 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/awsnodejsdynamodb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS,Python</title>
+      <link>https://jackliangtw.github.io/tags/awspython/</link>
+      <pubDate>Fri, 05 May 2023 22:25:22 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/tags/awspython/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Hugo</title>
       <link>https://jackliangtw.github.io/tags/hugo/</link>
       <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
-      
       <guid>https://jackliangtw.github.io/tags/hugo/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>AWS,EC2,Nodejs,Docker</title>
-      <link>https://jackliangtw.github.io/tags/awsec2nodejsdocker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jackliangtw.github.io/tags/awsec2nodejsdocker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS,Nodejs,Dynamodb</title>
-      <link>https://jackliangtw.github.io/tags/awsnodejsdynamodb/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jackliangtw.github.io/tags/awsnodejsdynamodb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS,Nodejs,Lambda</title>
-      <link>https://jackliangtw.github.io/tags/awsnodejslambda/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jackliangtw.github.io/tags/awsnodejslambda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS,Python</title>
-      <link>https://jackliangtw.github.io/tags/awspython/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jackliangtw.github.io/tags/awspython/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS,Python,Boto3,ApiGateway</title>
-      <link>https://jackliangtw.github.io/tags/awspythonboto3apigateway/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jackliangtw.github.io/tags/awspythonboto3apigateway/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS,Python,Boto3,Dynamodb</title>
-      <link>https://jackliangtw.github.io/tags/awspythonboto3dynamodb/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jackliangtw.github.io/tags/awspythonboto3dynamodb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS,Python,Boto3,Lambda</title>
-      <link>https://jackliangtw.github.io/tags/awspythonboto3lambda/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jackliangtw.github.io/tags/awspythonboto3lambda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TypeScript</title>
-      <link>https://jackliangtw.github.io/tags/typescript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jackliangtw.github.io/tags/typescript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>演算法,JS</title>
-      <link>https://jackliangtw.github.io/tags/%E6%BC%94%E7%AE%97%E6%B3%95js/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jackliangtw.github.io/tags/%E6%BC%94%E7%AE%97%E6%B3%95js/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

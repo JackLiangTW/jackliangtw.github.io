@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android,逆向,Frida,Magisk on Jack Liang&#39;s portfolio and blog</title>
+    <link>https://jackliangtw.github.io/tags/android%E9%80%86%E5%90%91fridamagisk/</link>
+    <description>Recent content in Android,逆向,Frida,Magisk on Jack Liang&#39;s portfolio and blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Apr 2026 10:10:00 +0530</lastBuildDate>
+    <atom:link href="https://jackliangtw.github.io/tags/android%E9%80%86%E5%90%91fridamagisk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android 逆向入門:Frida &#43; Magisk &#43; LSPosed 工具分工</title>
+      <link>https://jackliangtw.github.io/blog/android_reverse_frida/</link>
+      <pubDate>Tue, 21 Apr 2026 10:10:00 +0530</pubDate>
+      <guid>https://jackliangtw.github.io/blog/android_reverse_frida/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;重要提醒&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;本文介紹的工具與手法屬於&lt;strong&gt;資安 / 逆向測試&lt;/strong&gt;領域,僅限用於:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;自己或客戶&lt;strong&gt;授權&lt;/strong&gt;的 App(如 CTF、滲透測試、自家產品強化)&lt;/li&gt;&#xA;&lt;li&gt;學習用的公開教材、練習 App(例如 &lt;code&gt;InsecureBankv2&lt;/code&gt;、&lt;code&gt;DIVA&lt;/code&gt;、OWASP MSTG 測試 App)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;操作時請注意:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;未經授權對他人 App 進行逆向、繞過保護、封包竄改,可能觸犯當地法律(著作權法、個資保護法、妨害電腦使用罪…),請遵守當地法規&lt;/li&gt;&#xA;&lt;li&gt;執行請在隔離的測試裝置 / 模擬器,&lt;strong&gt;不要拿主力手機或個人銀行 App&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;本文內容僅供技術交流,風險自負&lt;/strong&gt;,作者不為讀者依此操作所致之法律、財務、裝置損失負責&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;工具分工&#34;&gt;工具分工&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;工具&lt;/th&gt;&#xA;          &lt;th&gt;角色&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;apktool&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;靜態拆 APK:AndroidManifest、smali、resources&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Jadx&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;反編譯 dex → 可讀 Java;入門必備&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;JEB Decompiler&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;商用 Jadx 強化版(smali → Java 還原更好)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Frida&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;動態 hook:attach 到執行中的 process 改行為&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Magisk&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;取得 root,並提供模組系統&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;LSPosed&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Magisk 上的 Xposed 實作,Java/Kotlin hook&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Shamiko&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;在 Magisk 上隱藏 root,逃過 SafetyNet&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;frida-常用指令&#34;&gt;Frida 常用指令&lt;/h2&gt;&#xA;&lt;p&gt;前置:裝置要有 &lt;strong&gt;frida-server&lt;/strong&gt; 在跑(root 裝置),App 要開著在前景。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

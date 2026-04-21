@@ -47,6 +47,8 @@
       
         <li><a href="https://jackliangtw.github.io/about/">About</a></li>
       
+        <li><a href="https://jackliangtw.github.io/about-en/">About (EN)</a></li>
+      
         <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
       
     </ul>
@@ -75,7 +77,7 @@
   
   
   
-  <a target="blank" href="https://leetcode.com/JackLiangTW/" data-animate-hover="pulse" class="external" title="LeetCode">
+  <a target="blank" href="https://leetcode.com/u/k8865432110/" data-animate-hover="pulse" class="external" title="LeetCode">
     <i class="fa fa-code"></i>
   </a>
   
@@ -116,7 +118,7 @@
 <h4 id="implements">implements:</h4>
 <h6 id="實現介面定義類別結構">實現介面(定義類別結構)</h6>
 <p><code>只有class可以使用, 後面可以接type, interface, class</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">cccT</span> <span style="color:#f92672">=</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">cccT</span> <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>:<span style="color:#66d9ef">string</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">cccI</span>{
@@ -137,7 +139,7 @@
 <h6 id="類繼承-實現介面擴展">(類)繼承, (實現介面)擴展</h6>
 <p>介面擴展:<code>只有interface, class能使用, type 擴展只能用 &amp;,|</code><br>
 class(類)繼承:<code>eg:classA extends classB{}</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">cccT</span> <span style="color:#f92672">=</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">cccT</span> <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>:<span style="color:#66d9ef">string</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">cccI</span>{
@@ -148,7 +150,7 @@ class(類)繼承:<code>eg:classA extends classB{}</code></p>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">newInter1</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">cccT</span>, <span style="color:#a6e22e">cccI</span>, <span style="color:#a6e22e">cccC</span>{ <span style="color:#75715e">//- interface可以擴展 with 三個介面
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">more</span>:<span style="color:#66d9ef">string</span>
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">more</span>:<span style="color:#66d9ef">string</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">vvvv1</span>: <span style="color:#66d9ef">newInter1</span> <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Jane&#34;</span>,
@@ -157,22 +159,22 @@ class(類)繼承:<code>eg:classA extends classB{}</code></p>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">more</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;nothing&#34;</span>
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">vvvv1</span>); <span style="color:#75715e">//- { name: &#39;Jane&#39;, age: 33, info: &#39;Good&#39;, more: &#39;nothing&#39; }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">newInter2</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">cccC</span>{ <span style="color:#75715e">//- class介面只能和class介面擴展
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">more</span>:<span style="color:#66d9ef">string</span>
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">more</span>:<span style="color:#66d9ef">string</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">vvv2</span>:<span style="color:#66d9ef">newInter2</span> <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">info</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;Good&#34;</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">more</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;Fine&#34;</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">vvv2</span>); <span style="color:#75715e">//- { info: &#39;Good&#39;, more: &#39;Fine&#39; }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//-----------------------  擴展End ---------------------
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//-----------------------  class類 繼承
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 基礎類別（父類別）
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>) {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
@@ -183,10 +185,10 @@ class(類)繼承:<code>eg:classA extends classB{}</code></p>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// 衍生類別（子類別），繼承自 Animal
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Animal</span> {
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Animal</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">constructor</span>(<span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>) {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// 呼叫父類別的建構子
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">makeSound() {</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Woof woof!&#34;</span>);
@@ -195,7 +197,7 @@ class(類)繼承:<code>eg:classA extends classB{}</code></p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dog</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dog</span>(<span style="color:#e6db74">&#34;Buddy&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">dog</span>.<span style="color:#a6e22e">makeSound</span>(); <span style="color:#75715e">// 輸出: Woof woof!
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">dog</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// 輸出: Buddy
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">dog</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// 輸出: Buddy
 </span></span></span></code></pre></div>
          
       </div>

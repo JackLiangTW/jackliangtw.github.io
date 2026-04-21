@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Jack Liang&#39;s portfolio and blog</title>
+<meta name="description" content="Jack Liang&#39;s portfolio and blog">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://jackliangtw.github.io/css/owl.theme.css">
+
+
+  <link href="https://jackliangtw.github.io/css/style.pink.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://jackliangtw.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://jackliangtw.github.io/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+    
+      <p class="sidebar-p">I am a soft engineer with more than 5 years of experience.</p>
+    
+      <p class="sidebar-p">Lived in Taiwan.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://jackliangtw.github.io/portfolio/">Portfolio</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about/">About</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/about-en/">About (EN)</a></li>
+      
+        <li><a href="https://jackliangtw.github.io/blog/">Blog</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a target="blank" href="mailto:k8865432110@gmail.com" data-animate-hover="pulse" class="email" title="E-mail">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://github.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitHub" rel="me">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://gitlab.com/JackLiangTW" data-animate-hover="pulse" class="external" title="GitLab" rel="me">
+    <i class="fa fa-gitlab"></i>
+  </a>
+  
+  
+  
+  
+  <a target="blank" href="https://leetcode.com/u/k8865432110/" data-animate-hover="pulse" class="external" title="LeetCode">
+    <i class="fa fa-code"></i>
+  </a>
+  
+  
+  <a target="blank" href="https://codepen.io/jackliangtw/pens/showcase" data-animate-hover="pulse" class="external" title="CodePen">
+    <i class="fa fa-codepen"></i>
+  </a>
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2023 Jack Liang |
+        
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://jackliangtw.github.io/">Jack Liang&#39;s portfolio and blog</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>Kibana Discover 查詢:KQL 語法與踩過的坑</h1>
+         <h2 id="discover-基本流程">Discover 基本流程</h2>
+<ol>
+<li>Kibana 左側 → <strong>Discover</strong>。</li>
+<li>右上選時間範圍(<code>now-15m</code>、<code>now-7d/d</code> 等)。</li>
+<li>上方搜尋框輸入 KQL;左側用 <strong>Add filter</strong> 建結構化條件。</li>
+</ol>
+<h2 id="kql-語法重點">KQL 語法重點</h2>
+<p>KQL 與 Lucene 不同;常見 pipeline 語法(Observability / Security 端):</p>
+<pre tabindex="0"><code class="language-kql" data-lang="kql">AppLogs
+| where request_body has &#39;3a117b9e-6c38-10db-8003-5c092426e0ef&#39;
+| where path : &#34;POST /api/orders&#34;
+| sort @timestamp desc
+| limit 50
+</code></pre><ul>
+<li><code>has</code> 做部分字串比對;<code>==</code> / <code>:</code> 做完全匹配。</li>
+<li>多個條件用 <code>|</code> 串 <code>where</code>,比一整行用 <code>and</code> 可讀性高。</li>
+</ul>
+<h2 id="兩個踩過的坑">兩個踩過的坑</h2>
+<ul>
+<li><strong>查 <code>request_body</code> 要帶前綴</strong>:有時 log 是 JSON-escape 過後的字串,原本的 <code>34717482768</code> 會被 tokenize 成 <code>&quot;x2234717482768&quot;</code> 之類的格式,得用 <code>x2234717482768</code> 才能命中。看 raw document 確認 tokenizer 後的實際值。</li>
+<li><strong>先 Add filter,再細化</strong>:常用欄位(<code>env</code>, <code>service</code>, <code>level</code>)用 filter UI 固定住比較快,搜尋框只放本次特殊條件,避免一行塞到底又長又錯。</li>
+</ul>
+<h2 id="分享--保存">分享 / 保存</h2>
+<ul>
+<li>URL 本身會把查詢與時間範圍 encode 在 query string → 直接複製丟給同事即可。</li>
+<li>需要固定的視圖做成 Dashboard 或 Saved Search,比每次手打 KQL 好。</li>
+</ul>
+
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://jackliangtw.github.io/js/jquery.min.js"></script>
+<script src="https://jackliangtw.github.io/js/bootstrap.min.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.cookie.js"> </script>
+<script src="https://jackliangtw.github.io/js/ekko-lightbox.js"></script>
+<script src="https://jackliangtw.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://jackliangtw.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://jackliangtw.github.io/js/owl.carousel.min.js"></script>
+<script src="https://jackliangtw.github.io/js/front.js"></script>
+
+
+
+</body>
+</html>
